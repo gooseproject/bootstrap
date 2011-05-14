@@ -4,8 +4,9 @@
 
 for i in requires/*.requires
 do
-  for j in $(cat $i) 
+  for j in $(cat $i)
   do
-    ls ${j}*.src.rpm > ${i}.packages 2> /dev/null
-  done
+    echo $i, $j 
+    ls ${j}*.src.rpm >> requires/${i}.packages 2> /dev/null 
+  done 
 done
