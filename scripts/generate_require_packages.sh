@@ -2,6 +2,7 @@
 
 # run from rpms directory after running generate_requires.sh
 
+rm requires/*.packages
 for i in requires/*.requires
 do
   for j in $(cat $i)
