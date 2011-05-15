@@ -5,7 +5,8 @@ mkdir specs
 
 for i in *.src.rpm
 do
-  cd specs
-  rpm2cpio ../${i} | cpio -iumd \*.spec
-  cd ..
+  mkdir -p specs/${i}
+  cd specs/${i}
+  rpm2cpio ../../${i} | cpio --quiet -iumd \*.spec
+  cd ../..
 done

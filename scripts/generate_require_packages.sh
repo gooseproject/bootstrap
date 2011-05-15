@@ -3,11 +3,10 @@
 # run from rpms directory after running generate_requires.sh
 
 rm requires/*.packages
-for i in requires/*.requires
+for i in *.src.rpm
 do
-  for j in $(cat $i)
+  for j in $( cat requires/${i}.{requires,specreqs} | tr -d ' ' | sort | uniq )
   do
-    echo $i, $j 
-    ls ${j}*.src.rpm >> requires/${i}.packages 2> /dev/null 
-  done 
+      ls ${j}*.src.rpm >> requires/${i}.packages 2> /dev/null 
+  done
 done
