@@ -1,4 +1,5 @@
 ftp.redhat.com/
 combined/
 control/
+logs/
 .*.sw[po]
