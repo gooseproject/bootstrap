@@ -5,3 +5,5 @@ wget -c -nv -m ftp://ftp.redhat.com/pub/redhat/linux/enterprise/6Server/en/os/SR
 wget -c -nv -m ftp://ftp.redhat.com/pub/redhat/linux/enterprise/6Workstation/en/os/SRPMS/ -a sync.log
 
 hardlink -cv ftp.redhat.com &>> sync.log
+
+touch control/last-sync.empty
