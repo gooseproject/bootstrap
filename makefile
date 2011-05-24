@@ -1,6 +1,23 @@
 all:
 	@echo all
 
+control/requires.empty: control/specs.empty
+	for i in combined/*src.rpm
+	do 
+	  rpm -qRp ${i} > requires/${i}.requires
+	done  
+	touch control/requires.empty
+
+control/specs.empty: combined/*.src.rpm
+	for i in combined/*.src.rpm
+	do
+	  mkdir specs/${i}
+	  cd specs/${i}
+	  rpm2cpio ../../${i} | cpio -iumd \*.spec
+	  cd ../..
+	done
+	touch control/specs.empty
+
 control/combined.empty: control/sync.empty
 	cp -lnu -t combined ftp.redhat.com/pub/redhat/linux/enterprise/6Client/en/os/SRPMS/*.src.rpm &>> logs/combined.log
 	cp -lnu -t combined ftp.redhat.com/pub/redhat/linux/enterprise/6Workstation/en/os/SRPMS/*.src.rpm &>> logs/combined.log
