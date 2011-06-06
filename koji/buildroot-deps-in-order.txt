@@ -1,17 +1,92 @@
 goose-release-server
-setup
-filesystem
-basesystem
-tzdata
-libgcc
-glibc
-glibc-common
-ncurses-base
-ncurses-libs
-nss-softokn-freebl
-bash
-libsepol
-libselinux
-audit-libs
+NO DEPS
+
 shadow-utils
+- setup, audit-libs (audit-libs-devel), libselinux (libselinux-devel)
+
+setup
+- bash, tcsh, perl
+
+audit-libs
+- swig, python (python-devel), tcp_wrappers (tcp_wrappers-devel), libcap-ng (libcap-ng-devel), kernel (kernel-headers), chkconfig, coreutils, openldap (openldap-devel)
+
+libselinux (libselinux-devel)
+- python (python-devel), ruby (ruby-devel), libsepol, libsepol-static, swig
+
+python (python-devel)
+- readline (readline-devel), openssl (openssl-devel), gmp (gmp-devel), ncurses (ncurses-devel), gdbm (gdbm-devel), zlib (zlib-devel), expat (expat-devel), libGL (libGL-devel), tk, tix, gcc-c++, libX11 (libX11-devel), glibc (glibc-devel), bzip2 (bzip2-devel), tar, findutils, pkgconfig, tcl (tcl-devel), tk-devel, tix (tix-devel), sqlite (sqlite-devel), autoconf, db4 (db4-devel), libffi (libffi-devel), valgrind (valgrind-devel), systemtap (systemtap-sdt-devel)
+
+readline (readline-devel)
+
+  - texinfo (info)
+   - ncurses (ncurses-devel)
+    - gpm (gpm-devel)
+     - chkconfig
+      - popt-devel
+        - automake 
+         - libtool
+          - gcc (libstdc++-devel)
+           - binutils glibc-static zlib-devel dejagnu, bison, flex, texinfo, sharutils gdb 
+           - gettext 
+            - autoconf 
+             - m4
+          - gcc-gfortran
+          - gcc-java
+         - gettext-devel
+         - flex
+         - bison
+         - texinfo-tex
+         - texlive-dvips
+         - java-devel-openjdk
+         - gcc-gfortran
+         - compat-gcc-34-g77
+         - dejagnu 
+         - expect 
+         - emacs 
+         - imake 
+         - python-docutils
+        - gcc-c++
+        - gcc-java
+        - libgcj
+        - java-1.6.0-openjdk-devel
+        - zip
+        - unzip
+        - expat-devel
+        - cvs
+
+     - newt (newt-devel)
+      - python-devel
+
+      - slang-devel
+      - docbook-utils
+    - glibc
+
+    - sed 
+    - gawk 
+    - libcap-ng-devel
+   - pkgconfig
+ - openssl-devel 
+ - gmp-devel
+ - gdbm-devel
+ - zlib-devel
+ - libGL-devel
+ - tk
+ - tix
+ - libX11-devel
+ - glibc-devel
+ - bzip2
+ - tar 
+ - /usr/bin/find
+ - pkgconfig
+ - tcl-devel
+ - tk-devel
+ - tix-devel
+ - bzip2-devel
+ - sqlite-devel
+ - autoconf
+ - db4-devel
+ - libffi-devel
+ - valgrind-devel
+ - systemtap-sdt-devel 
+
 
