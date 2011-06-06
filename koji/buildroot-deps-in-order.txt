@@ -1,36 +1,140 @@
+-- buildroot --
+- bash, bzip2, coreutils, cpio, diffutils, findutils, gawk, gcc, gcc-c++, goose-release-server, grep, gzip, info, make, patch, redhat-rpm-config, rpm-build, sed, shadow-utils, tar, texinfo, unzip, util-linux-ng, which, xz
+
+bash
+- ncurses-libs, texinfo, bison, ncurses (ncurses-devel), autoconf, gettext
+
+bzip2 (bzip2-libs)
+- NO DEPS
+
+coreutils
+- libselinux (libselinux-devel), libacl (libacl-devel), gettext, bison, texinfo, autoconf, automake, libcap (libcap-devel), libattr (libattr-devel), gmp (gmp-devel), attr, strace, libselinux, libattr, grep, ncurses
+
+cpio
+- texinfo (info), autoconf, gettext, rmt
+
+diffutils
+- texinfo (info), help2man 
+
+findutils
+- texinfo (info), libtool, automake, autoconf, dejagnu, gettext-devel, libselinux (libselinux-devel)
+
+gawk
+- texinfo (info), byacc
+
+gcc
+- binutils, glibc-static, zlib (zlib-devel), gettext, dejagnu, bison, flex, texinfo, sharutils, gdb, ecj, zip, unzip, gcc-java, libgcj (libgcj-devel), glibc (glibc-devel), elfutils (elfutils-devel), gcc-gnat, libgnat (libgnat-devel), libunwind, ppl (ppl-devel), cloog-ppl (cloog-ppl-devel), doxygen, graphviz, libgcc, libgomp, gcc, libstdc++ (libstdc++-devel), libobjc, gcc-c++, libgfortran, gmp (gmp-devel), libmudflap (libmudflap-devel), zip, gtk2 (gtk2-devel), glib2 (glib2-devel), libart_lgpl (libart_lgpl-devel), xulrunner (xulrunner-devel), alsa-lib (alsa-lib-devel), libXtst (libXtst-devel), libXt (libXt-devel), gawk, 
+
+gcc-c++
+- 
+
 goose-release-server
-NO DEPS
+- NO DEPS
+
+grep
+- 
+
+gzip
+-  
+
+info
+- 
+
+make
+-  
+
+patch
+- 
+
+redhat-rpm-config
+- 
+
+rpm-build
+- 
+
+sed
+- 
 
 shadow-utils
 - setup, audit-libs (audit-libs-devel), libselinux (libselinux-devel)
 
+tar
+- 
+
+texinfo 
+- 
+
+unzip
+- 
+
+util-linux-ng
+- 
+
+which
+- 
+
+xz
+- 
+
 setup
 - bash, tcsh, perl
 
-audit-libs
+audit-libs (audit-libs-devel)
 - swig, python (python-devel), tcp_wrappers (tcp_wrappers-devel), libcap-ng (libcap-ng-devel), kernel (kernel-headers), chkconfig, coreutils, openldap (openldap-devel)
 
 libselinux (libselinux-devel)
 - python (python-devel), ruby (ruby-devel), libsepol, libsepol-static, swig
+
+tcsh
+- grep, coreutils, autoconf, automake, ncurses (ncurses-devel), gettext (gettext-devel)
+
+perl (perl-devel)
+- tcsh, dos2unix, man, groff, gdbm-devel, db4-devel, zlib-devel, procps, rsyslog, perl-libs, perl(Compress::Zlib), perl(Digest::SHA), perl(Module::Pluggable), perl(Module::CoreList), perl(Test::Harness), perl(IPC::Cmd), perl(Module::Load::Conditional), perl(Params::Check), perl(Compress::Zlib), perl(ExtUtils::CBuilder), perl(ExtUtils::ParseXS), perl(version), perl(Log::Message::Simple), perl-Archive-Extract, perl-Archive-Tar, perl-Compress-Raw-Zlib, perl-Compress-Zlib, perl-CPAN, perl-CPANPLUS, perl-Digest-SHA, perl-ExtUtils-CBuilder, perl-ExtUtils-Embed, perl-ExtUtils-MakeMaker, perl-ExtUtils-ParseXS, perl-File-Fetch, perl-IO-Compress-Base, perl-IO-Compress-Zlib, perl-IO-Zlib, perl-IPC-Cmd, perl-Locale-Maketext-Simple, perl-Log-Message, perl-Log-Message-Simple, perl-Module-Build, perl-Module-CoreList, perl-Module-Load, perl-Module-Load-Conditional, perl-Module-Loaded, perl-Module-Pluggable, perl-Object-Accessor, perl-Package-Constants, perl-Params-Check, perl-Pod-Escapes, perl-Pod-Simple, perl-Term-UI, perl-Test-Harness, perl-Test-Simple, perl-Time-Piece, perl-Time-HiRes, perl-version, perl-parent, perl-Parse-CPAN-Meta
 
 python (python-devel)
 - readline (readline-devel), openssl (openssl-devel), gmp (gmp-devel), ncurses (ncurses-devel), gdbm (gdbm-devel), zlib (zlib-devel), expat (expat-devel), libGL (libGL-devel), tk, tix, gcc-c++, libX11 (libX11-devel), glibc (glibc-devel), bzip2 (bzip2-devel), tar, findutils, pkgconfig, tcl (tcl-devel), tk-devel, tix (tix-devel), sqlite (sqlite-devel), autoconf, db4 (db4-devel), libffi (libffi-devel), valgrind (valgrind-devel), systemtap (systemtap-sdt-devel)
 
 readline (readline-devel)
 
-  - texinfo (info)
-   - ncurses (ncurses-devel)
-    - gpm (gpm-devel)
-     - chkconfig
-      - popt-devel
-        - automake 
-         - libtool
-          - gcc (libstdc++-devel)
-           - binutils glibc-static zlib-devel dejagnu, bison, flex, texinfo, sharutils gdb 
-           - gettext 
-            - autoconf 
-             - m4
-          - gcc-gfortran
+texinfo (info)
+
+ncurses (ncurses-devel)
+
+gpm (gpm-devel)
+
+chkconfig
+
+popt-devel
+
+automake 
+
+libtool
+
+gcc (libstdc++-devel)
+
+binutils
+
+glibc-static 
+
+zlib-devel 
+
+dejagnu
+
+bison
+
+flex
+
+sharutils
+
+gdb 
+
+      - gettext 
+
+       - autoconf 
+
+        - m4
+
+     - gcc-gfortran
           - gcc-java
          - gettext-devel
          - flex
