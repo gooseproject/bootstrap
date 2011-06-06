@@ -1,0 +1,17 @@
+goose-release-server
+setup
+filesystem
+basesystem
+tzdata
+libgcc
+glibc
+glibc-common
+ncurses-base
+ncurses-libs
+nss-softokn-freebl
+bash
+libsepol
+libselinux
+audit-libs
+shadow-utils
+
