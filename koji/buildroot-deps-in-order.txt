@@ -46,6 +46,12 @@ libgcj-devel *
 goose-release-server *
 - NO DEPS
 
+gpm
+gpm-devel
+gpm-libs
+gpm-static
+- sed, gawk, texinfo, bison, ncurses (ncurses-devel), autoconf, automake, libtool, libcap-ng-devel, glibc, pkgconfig, chkconfig, texinfo (info)
+
 grep *
 - texinfo (info), pcre (pcre-devel), autoconf, automake, gettext
 
@@ -59,12 +65,24 @@ info
 make *
 - texinfo (info)
 
+ncurses *
+ncurses-libs
+ncurses-base
+ncurses-term
+ncurses-devel
+libtermcap-devel
+- gpm-devel, pkgconfig
+
 patch *
 - libselinux (libselinux-devel)
 
 pkgconfig *
 pkg-config
 - NO DEPS
+
+readline *
+readline-static
+- ncurses-devel, pkgconfig
 
 redhat-rpm-config *
 - coreutils
