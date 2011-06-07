@@ -5,48 +5,63 @@ bash *
 - ncurses-libs, texinfo, bison, ncurses (ncurses-devel), autoconf, gettext
 
 bzip2 *
-bzip2-libs *
+bzip2-libs
 - NO DEPS
 
-coreutils
-- libselinux (libselinux-devel), acl (libacl-devel), gettext, bison, texinfo, autoconf, automake, libcap (libcap-devel), libattr (libattr-devel), gmp (gmp-devel), attr, strace, libselinux, libattr, grep, ncurses
+coreutils *
+mktemp
+- libselinux (libselinux-devel), acl (libacl-devel), gettext, bison, texinfo, autoconf, automake, libcap (libcap-devel), attr (libattr-devel), gmp (gmp-devel), strace, grep, ncurses
 
-cpio
+cpio *
 - texinfo (info), autoconf, gettext, rmt
 
-diffutils
+diffutils *
 - texinfo (info), help2man 
 
-findutils
-- texinfo (info), libtool, automake, autoconf, dejagnu, gettext-devel, libselinux (libselinux-devel)
+findutils *
+- texinfo (info), libtool, automake, autoconf, dejagnu, gettext (gettext-devel), libselinux (libselinux-devel)
 
-gawk
+gawk *
 - texinfo (info), byacc
 
-gcc (provides gcc-c++)
-- binutils, glibc-static, zlib (zlib-devel), gettext, dejagnu, bison, flex, texinfo, sharutils, gdb, ecj, zip, unzip, gcc-java, libgcj (libgcj-devel), glibc (glibc-devel), elfutils (elfutils-devel), gcc-gnat, libgnat (libgnat-devel), libunwind, ppl (ppl-devel), cloog-ppl (cloog-ppl-devel), doxygen, graphviz, libgcc, libgomp, libstdc++ (libstdc++-devel), libobjc, , libgfortran, gmp (gmp-devel), libmudflap (libmudflap-devel), zip, gtk2 (gtk2-devel), glib2 (glib2-devel), libart_lgpl (libart_lgpl-devel), xulrunner (xulrunner-devel), alsa-lib (alsa-lib-devel), libXtst (libXtst-devel), libXt (libXt-devel), gawk
+gcc *
+gcc-c++
+libgcc
+libgomp
+libstdc++
+libstdc++-devel
+libobjc
+libgfortran 
+libmudflap
+gcc-java
+gcc-gnat
+libgnat
+libgnat-devel
+libgcj
+libgcj-devel
+- binutils, glibc-static, zlib (zlib-devel), gettext, dejagnu, bison, flex, texinfo, sharutils, gdb, ecj, zip, unzip, glibc (glibc-devel), elfutils (elfutils-devel), ppl (ppl-devel), cloog-ppl (cloog-ppl-devel), doxygen, graphviz, libobjc, gmp (gmp-devel), zip, gtk2 (gtk2-devel), glib2 (glib2-devel), libart_lgpl (libart_lgpl-devel), xulrunner (xulrunner-devel), alsa-lib (alsa-lib-devel), libXtst (libXtst-devel), libXt (libXt-devel), gawk
 
 goose-release-server
 - NO DEPS
 
-grep
-- texinfo (info), pcre (pcre-devel), autoconf automake, gettext
+grep *
+- texinfo (info), pcre (pcre-devel), autoconf, automake, gettext
 
-gzip
-- texinfo (info), mktemp, less 
+gzip *
+- texinfo (info), coreutils, less 
 
-texinfo
+texinfo *
 info 
-- zlib (zlib-devel), ncurses (ncurses-devel), tetex, texlive
+- zlib (zlib-devel), ncurses (ncurses-devel), texlive (tetex)
 
-make
+make *
 - texinfo (info)
 
-patch
+patch *
 - libselinux (libselinux-devel)
 
-redhat-rpm-config
-- mktemp
+redhat-rpm-config *
+- coreutils
 
 rpm-build (provided by rpm)
 - coreutils, db4-utils, popt, curl, db4 (db4-devel), fakechroot, redhat-rpm-config, gawk, elfutils (elfutils-devel), elfutils-libelf (elfutils-libelf-devel), readline (readline-devel), nss (nss-devel), popt (popt-devel), file (file-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), bzip2 (bzip2-devel), python (python-devel), lua (lua-devel), libcap (libcap-devel), acl (libacl-devel), autoconf, xz (xz-devel), sqlite (sqlite-devel), findutils, sed, grep, diffutils, patch, unzip, gzip, cpio, lzma, pkgconfig, gdb, crontabs, logrotate
@@ -125,3 +140,174 @@ attr
 libattr
 libattr-devel
 - gettext, libtool
+
+gmp
+gmp-devel
+- autoconf, automake, libtool, texinfo (info)
+
+strace
+- libaio (libaio-devel), acl (libacl-devel)
+
+dump
+rmt
+- e2fsprogs (e2fsprogs-devel), readline (readline-devel), zlib (zlib-devel), bzip2 (bzip2-devel), automake, device-mapper (device-mapper-devel), libselinux (libselinux-devel), setup
+
+help2man
+- perl(Locale::gettext), texinfo (info)
+
+libtool
+ltdl
+ltdl-libs
+ltdl-devel
+libtool-ltdl
+- texinfo (info), autoconf, automake, libstdc++-devel, gcc-gfortran, gcc-java, gcc, glibc
+
+dejagnu
+- expect, screen, texinfo (info)
+
+byacc
+- NO DEPS
+
+binutils
+- texinfo (info), gettext, flex, bison, zlib (zlib-devel), dejagnu, zlib-static, glibc-static, sharutils 
+
+glibc
+glibc-devel
+glibc-headers
+glibc-common
+glibc-static
+glibc-debuginfo
+glibc-debuginfo-common
+- basesystem, libgcc, gd (gd-devel), libpng (libpng-devel), zlib (zlib-devel), texinfo (info), libselinux (libselinux-devel), audit-libs (audit-libs-devel), sed, libcap (libcap-devel), gettext, nss (nss-devel), procps, gawk, util-linux-ng, gcc, binutils, elfutils, rpm, kernel-headers, tzdata, chkconfig, shadow-utils, sh-utils
+
+zlib
+zlib-devel
+zlib-static
+- automake, autoconf, libtool, minizip, pkgconfig
+
+flex
+- m4, gettext, bison, texinfo (info), 
+
+sharutils
+- gettext, texinfo (info)
+
+gdb
+- ncurses (ncurses-devel), texinfo (info), gettext, flex, bison, expat (expat-devel), readline (readline-devel), rpm (rpm-devel), zlib (zlib-devel), python-libs, python (python-devel), libstdc++, gcc-gnat, libgnat, sharutils, dejagnu, gcc, gcc-c++, gcc-gfortran, gcc-java, gcc-objc, prelink, fpc, gcc44, gcc44-gfortran, glibc (glibc-devel), glibc-static, libgcc, libstdc++, libgcj, valgrind, libunwind (libunwind-devel)
+
+ecj
+- gcc-java, java-1.5.0-gcj-devel, java-gcj-compat, ant, libgcj
+
+zip
+- NO DEPS
+
+unzip 
+- bzip2 (bzip2-devel)
+
+elfutils
+elfutils-devel
+elfutils-devel-static
+elfutils-libs
+elfutils-libelf
+elfutils-libelf-devel
+elfutils-libelf-devel-static
+- gettext, bison, flex, bzip2, gcc, glibc-headers, zlib (zlib-devel), bzip2 (bzip2-devel), xz (xz-devel), 
+
+ppl
+ppl-devel
+ppl-static
+ppl-utils
+ppl-gprolog
+ppl-gprolog-static
+ppl-swiprolog
+ppl-swiprolog-static
+ppl-java-javadoc
+ppl-pwl
+ppl-pwl-devel
+ppl-pwl-static
+ppl-pwl-docs
+- gmp (gmp-devel), m4, glibc, glpk (glpk-devel), gprolog, pl (pl-devel), yap (yap-devel), java (java-devel), jpackage-utils
+
+cloog
+cloog-ppl
+cloog-ppl-devel
+- ppl (ppl-devel), gmp (gmp-devel), texinfo (info), libtool
+
+doxygen
+doxygen-doxywizard
+- perl, texlive-dvips, texlive-utils, texlive-latex, ghostscript, gettext, flex, bison, qt (qt-devel)
+
+graphviz
+graphviz-devel
+graphviz-devil
+graphviz-gd
+graphviz-guile
+graphviz-java
+graphviz-lua
+graphviz-perl
+graphviz-php
+- zlib (zlib-devel), libpng (libpng-devel), libjpeg (libjpeg-devel), expat (expat-devel), freetype (freetype-devel), ksh, bison, m4, flex, tk (tk-devel), tcl (tcl-devel), swig, fontconfig (fontconfig-devel), libtool-ltdl (libtool-ltdl-devel), ruby (ruby-devel), guile (guile-devel), python (python-devel), libXaw (libXaw-devel), libSM (libSM-devel), libXext (libXext-devel), java (java-devel), php (php-devel), cairo (cairo-devel), pango (pango-devel), gmp (gmp-devel), lua (lua-devel), gtk2 (gtk2-devel), libgnomeui (libgnomeui-devel), gd (gd-devel), perl (perl-devel), urw-fonts, glibc, php-common
+
+gtk2
+- atk (atk-devel), pango (pango-devel), glib2 (glib2-devel), libtiff (libtiff-devel), libjpeg (libjpeg-devel), jasper (jasper-devel), libXi (libXi-devel), libpng (libpng-devel), automake, autoconf, libtool, pkgconfig, gettext, gtk-doc, cups (cups-devel), cairo (cairo-devel), libXrandr (libXrandr-devel), libXrender (libXrender-devel), libXcursor (libXcursor-devel), libXfixes (libXfixes-devel), libXinerama (libXinerama-devel), libXcomposite (libXcomposite-devel), libXdamage (libXdamage-devel), hicolor-icon-theme, imsettings, libX11 (libX11-devel), libXext (libXext-devel), libXi (libXi-devel), automake, gtk-doc
+
+glib2
+glib2-devel
+glib2-static
+- pkgconfig, gamin (gamin-devel), gettext, libattr (libattr-devel), libselinux (libselinux-devel), glibc (glibc-devel), automake, autoconf, libtool, gtk-doc 
+
+libart_lgpl
+libart_lgpl-devel
+- pkgconfig 
+
+xulrunner
+xulrunner-devel
+- nspr (nspr-devel) nss (nss-devel), cairo (cairo-devel), libpng (libpng-devel), libjpeg (libjpeg-devel), zip, bzip2 (bzip2-devel), zlib (zlib-devel), libIDL (libIDL-devel), gtk2 (gtk2-devel), gnome-vfs2 (gnome-vfs2-devel), libgnome (libgnome-devel), libgnomeui (libgnomeui-devel), krb5 (krb5-devel), pango (pango-devel), freetype (freetype-devel), libXt (libXt-devel), libXrender (libXrender-devel), hunspell (hunspell-devel), sqlite (sqlite-devel), startup-notification (startup-notification-devel), alsa-lib (alsa-lib-devel), libnotify (libnotify-devel), autoconf213, mozilla-filesystem, nspr (nspr-devel)
+
+alsa-lib
+alsa-lib-devel
+- doxygen, glibc, coreutils
+
+libXtst
+libXtst-devel
+- xorg-x11-proto (xorg-x11-proto-devel), libX11 (libX11-devel) libXext (libXext-devel), libXi (libXi-devel), xmlto
+
+libXt
+libXt-devel
+- xorg-x11-proto (xorg-x11-proto-devel), libX11 (libX11-devel), libSM (libSM-devel)
+
+pcre
+pcre-devel
+- NO DEPS
+
+less
+- ncurses (ncurses-devel), pcre (pcre-devel), autoconf, automake, libtool
+
+texlive
+texlive-afm
+texlive-utils
+texlive-xetex
+texlive-dvips
+texlive-latex
+texlive-context
+texlive-east-asian
+kpathsea
+kpathsea-devel
+mendexk
+tetex
+- flex, bison, ed, xdg-utils, desktop-file-utils, ncurses (ncurses-devel), zlib (zlib-devel), libpng (libpng-devel), gd (gd-devel), t1lib (t1lib-devel) libSM (libSM-devel), libICE (libICE-devel), Xaw3d (Xaw3d-devel), poppler (poppler-devel), teckit (teckit-devel) texlive-texmf, texlive-texmf-fonts, texlive-texmf-errata, texlive-texmf-afm, texlive-texmf-errata, ghostscript, texlive-texmf-xetex, dvipdfmx, xdvipdfmx, psutils, dvipng, dvipdfm, netpbm-progs, texlive-texmf-latex, texlive-texmf-context, texlive-texmf-errata-context, ruby, texlive-texmf-east-asian, texlive-texmf-errata-east-asian
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
