@@ -65,7 +65,8 @@ patch *
 redhat-rpm-config *
 - coreutils
 
-rpm-build (provided by rpm)
+rpm *
+rpm-build *
 - coreutils, popt (popt-devel), curl, db4 (db4-utils, db4-devel), fakechroot, redhat-rpm-config, gawk, elfutils (elfutils-devel), elfutils-libelf (elfutils-libelf-devel), readline (readline-devel), nss (nss-devel), file (file-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), bzip2 (bzip2-devel), python (python-devel), lua (lua-devel), libcap (libcap-devel), acl (libacl-devel), autoconf, xz (xz-devel), sqlite (sqlite-devel), findutils, sed, grep, diffutils, patch, unzip, gzip, cpio, lzma, pkgconfig, gdb, crontabs, logrotate
 
 sed
