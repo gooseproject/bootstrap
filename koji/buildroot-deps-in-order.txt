@@ -1,6 +1,8 @@
 -- buildroot --
 - bash, bzip2, coreutils, cpio, diffutils, findutils, gawk, gcc, gcc-c++, goose-release-server, grep, gzip, info, make, patch, redhat-rpm-config, rpm-build, sed, shadow-utils, tar, texinfo, unzip, util-linux-ng, which, xz
 
+(* implies all packages have been resolved somewhere else)
+
 bash *
 - ncurses-libs, texinfo, bison, ncurses (ncurses-devel), autoconf, gettext
 
@@ -41,7 +43,7 @@ libgcj
 libgcj-devel
 - binutils, glibc-static, zlib (zlib-devel), gettext, dejagnu, bison, flex, texinfo, sharutils, gdb, ecj, zip, unzip, glibc (glibc-devel), elfutils (elfutils-devel), ppl (ppl-devel), cloog-ppl (cloog-ppl-devel), doxygen, graphviz, libobjc, gmp (gmp-devel), zip, gtk2 (gtk2-devel), glib2 (glib2-devel), libart_lgpl (libart_lgpl-devel), xulrunner (xulrunner-devel), alsa-lib (alsa-lib-devel), libXtst (libXtst-devel), libXt (libXt-devel), gawk
 
-goose-release-server
+goose-release-server *
 - NO DEPS
 
 grep *
@@ -296,7 +298,13 @@ mendexk
 tetex
 - flex, bison, ed, xdg-utils, desktop-file-utils, ncurses (ncurses-devel), zlib (zlib-devel), libpng (libpng-devel), gd (gd-devel), t1lib (t1lib-devel) libSM (libSM-devel), libICE (libICE-devel), Xaw3d (Xaw3d-devel), poppler (poppler-devel), teckit (teckit-devel) texlive-texmf, texlive-texmf-fonts, texlive-texmf-errata, texlive-texmf-afm, texlive-texmf-errata, ghostscript, texlive-texmf-xetex, dvipdfmx, xdvipdfmx, psutils, dvipng, dvipdfm, netpbm-progs, texlive-texmf-latex, texlive-texmf-context, texlive-texmf-errata-context, ruby, texlive-texmf-east-asian, texlive-texmf-errata-east-asian
 
-
+db4
+db4-utils
+db4-devel
+db4-cxx
+db4-tcl
+db4-java
+- perl, libtool, ed, util-linux-ng, tcl (tcl-devel), gcc-java, java-1.6.0-openjdk (java-1.6.0-openjdk-devel)
 
 
 
