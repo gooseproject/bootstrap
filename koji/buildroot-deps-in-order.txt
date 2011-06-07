@@ -40,7 +40,7 @@ gcc-gnat
 libgnat
 libgnat-devel
 libgcj
-libgcj-devel
+libgcj-devel *
 - binutils, glibc-static, zlib (zlib-devel), gettext, dejagnu, bison, flex, texinfo, sharutils, gdb, ecj, zip, unzip, glibc (glibc-devel), elfutils (elfutils-devel), ppl (ppl-devel), cloog-ppl (cloog-ppl-devel), doxygen, graphviz, libobjc, gmp (gmp-devel), zip, gtk2 (gtk2-devel), glib2 (glib2-devel), libart_lgpl (libart_lgpl-devel), xulrunner (xulrunner-devel), alsa-lib (alsa-lib-devel), libXtst (libXtst-devel), libXt (libXt-devel), gawk
 
 goose-release-server *
@@ -66,7 +66,7 @@ redhat-rpm-config *
 - coreutils
 
 rpm-build (provided by rpm)
-- coreutils, db4-utils, popt, curl, db4 (db4-devel), fakechroot, redhat-rpm-config, gawk, elfutils (elfutils-devel), elfutils-libelf (elfutils-libelf-devel), readline (readline-devel), nss (nss-devel), popt (popt-devel), file (file-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), bzip2 (bzip2-devel), python (python-devel), lua (lua-devel), libcap (libcap-devel), acl (libacl-devel), autoconf, xz (xz-devel), sqlite (sqlite-devel), findutils, sed, grep, diffutils, patch, unzip, gzip, cpio, lzma, pkgconfig, gdb, crontabs, logrotate
+- coreutils, popt (popt-devel), curl, db4 (db4-utils, db4-devel), fakechroot, redhat-rpm-config, gawk, elfutils (elfutils-devel), elfutils-libelf (elfutils-libelf-devel), readline (readline-devel), nss (nss-devel), file (file-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), bzip2 (bzip2-devel), python (python-devel), lua (lua-devel), libcap (libcap-devel), acl (libacl-devel), autoconf, xz (xz-devel), sqlite (sqlite-devel), findutils, sed, grep, diffutils, patch, unzip, gzip, cpio, lzma, pkgconfig, gdb, crontabs, logrotate
 
 sed
 - glibc (glibc-devel), libselinux (libselinux-devel), texinfo (info)
@@ -87,7 +87,11 @@ which
 - readline (readline-devel), texinfo (info)
 
 xz
-- xz-libs, pkgconfig
+xz-libs
+xz-devel
+xz-lzma-compat
+lzma
+- pkgconfig
 
 -----------------------end buildroot-------------------------------------
 
@@ -212,7 +216,7 @@ elfutils-libs
 elfutils-libelf
 elfutils-libelf-devel
 elfutils-libelf-devel-static
-- gettext, bison, flex, bzip2, gcc, glibc-headers, zlib (zlib-devel), bzip2 (bzip2-devel), xz (xz-devel), 
+- gettext, bison, flex, bzip2, gcc, glibc-headers, zlib (zlib-devel), bzip2 (bzip2-devel), xz (xz-devel)
 
 ppl
 ppl-devel
@@ -305,6 +309,79 @@ db4-cxx
 db4-tcl
 db4-java
 - perl, libtool, ed, util-linux-ng, tcl (tcl-devel), gcc-java, java-1.6.0-openjdk (java-1.6.0-openjdk-devel)
+
+popt
+popt-devel
+popt-static
+- gettext
+
+curl
+libcurl
+libcurl-devel
+- automake, groff, krb5 (krb5-devel), libidn (libidn-devel), libssh2 (libssh2-devel), nss (nss-devel), openldap (openldap-devel), openssh-clients, openssh-server, pkgconfig, stunnel, valgrind, zlib (zlib-devel)
+
+fakechroot
+fakechroot-libs
+- autoconf, automake, libtool
+
+readline
+readline-devel
+readline-static
+- texinfo (info), ncurses (ncurses-devel)
+
+nss
+nss-devel
+nss-tools
+nss-sysinit
+nss-pkcs11-devel
+- nspr (nspr-devel), nss-util (nss-util-devel), nss-softokn (nss-softokn-devel), nss-system-init, sqlite-devel, zlib-devel, pkgconfig, gawk, psmisc, perl, zlib, coreutils, sed, nss-softokn-freebl-devel
+
+file
+file-devel
+file-static
+file-libs
+python-magic
+- zlib (zlib-devel), python (python-devel)
+
+lua
+lua-devel
+lua-static
+- readline (readline-devel), ncurses (ncurses-devel), pkgconfig
+
+sqlite
+sqlite-devel
+sqlite-doc
+lemon
+- ncurses-devel readline-devel glibc-devel, autoconf, pkgconfig
+
+pkgconfig
+- NO DEPS
+
+crontabs
+- cronie
+
+logrotate
+- coreutils, libsepol, libselinux (libselinux-devel), popt (popt-devel)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
