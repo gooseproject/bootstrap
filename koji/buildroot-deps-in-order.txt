@@ -1,14 +1,15 @@
 -- buildroot --
 - bash, bzip2, coreutils, cpio, diffutils, findutils, gawk, gcc, gcc-c++, goose-release-server, grep, gzip, info, make, patch, redhat-rpm-config, rpm-build, sed, shadow-utils, tar, texinfo, unzip, util-linux-ng, which, xz
 
-bash
+bash *
 - ncurses-libs, texinfo, bison, ncurses (ncurses-devel), autoconf, gettext
 
-bzip2 (bzip2-libs)
+bzip2 *
+bzip2-libs *
 - NO DEPS
 
 coreutils
-- libselinux (libselinux-devel), libacl (libacl-devel), gettext, bison, texinfo, autoconf, automake, libcap (libcap-devel), libattr (libattr-devel), gmp (gmp-devel), attr, strace, libselinux, libattr, grep, ncurses
+- libselinux (libselinux-devel), acl (libacl-devel), gettext, bison, texinfo, autoconf, automake, libcap (libcap-devel), libattr (libattr-devel), gmp (gmp-devel), attr, strace, libselinux, libattr, grep, ncurses
 
 cpio
 - texinfo (info), autoconf, gettext, rmt
@@ -22,59 +23,59 @@ findutils
 gawk
 - texinfo (info), byacc
 
-gcc
-- binutils, glibc-static, zlib (zlib-devel), gettext, dejagnu, bison, flex, texinfo, sharutils, gdb, ecj, zip, unzip, gcc-java, libgcj (libgcj-devel), glibc (glibc-devel), elfutils (elfutils-devel), gcc-gnat, libgnat (libgnat-devel), libunwind, ppl (ppl-devel), cloog-ppl (cloog-ppl-devel), doxygen, graphviz, libgcc, libgomp, gcc, libstdc++ (libstdc++-devel), libobjc, gcc-c++, libgfortran, gmp (gmp-devel), libmudflap (libmudflap-devel), zip, gtk2 (gtk2-devel), glib2 (glib2-devel), libart_lgpl (libart_lgpl-devel), xulrunner (xulrunner-devel), alsa-lib (alsa-lib-devel), libXtst (libXtst-devel), libXt (libXt-devel), gawk, 
-
-gcc-c++
-- 
+gcc (provides gcc-c++)
+- binutils, glibc-static, zlib (zlib-devel), gettext, dejagnu, bison, flex, texinfo, sharutils, gdb, ecj, zip, unzip, gcc-java, libgcj (libgcj-devel), glibc (glibc-devel), elfutils (elfutils-devel), gcc-gnat, libgnat (libgnat-devel), libunwind, ppl (ppl-devel), cloog-ppl (cloog-ppl-devel), doxygen, graphviz, libgcc, libgomp, libstdc++ (libstdc++-devel), libobjc, , libgfortran, gmp (gmp-devel), libmudflap (libmudflap-devel), zip, gtk2 (gtk2-devel), glib2 (glib2-devel), libart_lgpl (libart_lgpl-devel), xulrunner (xulrunner-devel), alsa-lib (alsa-lib-devel), libXtst (libXtst-devel), libXt (libXt-devel), gawk
 
 goose-release-server
 - NO DEPS
 
 grep
-- 
+- texinfo (info), pcre (pcre-devel), autoconf automake, gettext
 
 gzip
--  
+- texinfo (info), mktemp, less 
 
-info
-- 
+texinfo
+info 
+- zlib (zlib-devel), ncurses (ncurses-devel), tetex, texlive
 
 make
--  
+- texinfo (info)
 
 patch
-- 
+- libselinux (libselinux-devel)
 
 redhat-rpm-config
-- 
+- mktemp
 
-rpm-build
-- 
+rpm-build (provided by rpm)
+- coreutils, db4-utils, popt, curl, db4 (db4-devel), fakechroot, redhat-rpm-config, gawk, elfutils (elfutils-devel), elfutils-libelf (elfutils-libelf-devel), readline (readline-devel), nss (nss-devel), popt (popt-devel), file (file-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), bzip2 (bzip2-devel), python (python-devel), lua (lua-devel), libcap (libcap-devel), acl (libacl-devel), autoconf, xz (xz-devel), sqlite (sqlite-devel), findutils, sed, grep, diffutils, patch, unzip, gzip, cpio, lzma, pkgconfig, gdb, crontabs, logrotate
 
 sed
-- 
+- glibc (glibc-devel), libselinux (libselinux-devel), texinfo (info)
 
 shadow-utils
 - setup, audit-libs (audit-libs-devel), libselinux (libselinux-devel)
 
 tar
-- 
-
-texinfo 
-- 
+- texinfo (info), autoconf, automake, gzip, gettext, acl (libacl-devel), gawk, rsh, libselinux (libselinux-devel)
 
 unzip
-- 
+- bzip2 (bzip2-devel)
 
 util-linux-ng
-- 
+- audit-libs (audit-libs-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), pam (pam-devel), texinfo, zlib (zlib-devel), popt (popt-devel), libutempter (libutempter-devel), autoconf, automake, coreutils, libuuid, libblkid, udev, pkgconfig, shadow-utils
 
 which
-- 
+- readline (readline-devel), texinfo (info)
 
 xz
-- 
+- xz-libs, pkgconfig
+
+-----------------------end buildroot-------------------------------------
+
+bison
+- m4, java-1.6.0-openjdk (java-1.6.0-openjdk-devel), texinfo (info)
 
 setup
 - bash, tcsh, perl
@@ -82,7 +83,13 @@ setup
 audit-libs (audit-libs-devel)
 - swig, python (python-devel), tcp_wrappers (tcp_wrappers-devel), libcap-ng (libcap-ng-devel), kernel (kernel-headers), chkconfig, coreutils, openldap (openldap-devel)
 
-libselinux (libselinux-devel)
+acl
+libacl
+libacl-devel
+- libattr (libattr-devel), autoconf, libtool, gettext, gawk, glibc, nfs-utils-lib, openldap
+
+libselinux
+libselinux-devel
 - python (python-devel), ruby (ruby-devel), libsepol, libsepol-static, swig
 
 tcsh
@@ -94,103 +101,27 @@ perl (perl-devel)
 python (python-devel)
 - readline (readline-devel), openssl (openssl-devel), gmp (gmp-devel), ncurses (ncurses-devel), gdbm (gdbm-devel), zlib (zlib-devel), expat (expat-devel), libGL (libGL-devel), tk, tix, gcc-c++, libX11 (libX11-devel), glibc (glibc-devel), bzip2 (bzip2-devel), tar, findutils, pkgconfig, tcl (tcl-devel), tk-devel, tix (tix-devel), sqlite (sqlite-devel), autoconf, db4 (db4-devel), libffi (libffi-devel), valgrind (valgrind-devel), systemtap (systemtap-sdt-devel)
 
-readline (readline-devel)
+autoconf
+- m4, emacs, texinfo (info) 
 
-texinfo (info)
+automake
+- autoconf, texinfo (info), libtool, gettext-devel, flex, bison, texinfo-tex, texlive-dvips, gcc-java, java-devel-openjdk, gcc-gfortran, compat-gcc-34-g77, dejagnu expect, emacs, imake, python-docutils
 
-ncurses (ncurses-devel)
+gettext
+gettext-libs
+gettext-devel
+- autoconf, automake, libtool, bison, gcc-c++, gcc-java, libgcj, java-1.6.0-openjdk (java-1.6.0-openjdk-devel), libgcj, zip, unzip, cvs, texinfo (info), expat (expat-devel)
 
-gpm (gpm-devel)
+ncurses
+ncurses-devel
+ncurses-libs
+- gpm (gpm-devel), pkgconfig
 
-chkconfig
+libcap
+libcap-devel
+- attr (libattr-devel), pam (pam-devel)
 
-popt-devel
-
-automake 
-
-libtool
-
-gcc (libstdc++-devel)
-
-binutils
-
-glibc-static 
-
-zlib-devel 
-
-dejagnu
-
-bison
-
-flex
-
-sharutils
-
-gdb 
-
-      - gettext 
-
-       - autoconf 
-
-        - m4
-
-     - gcc-gfortran
-          - gcc-java
-         - gettext-devel
-         - flex
-         - bison
-         - texinfo-tex
-         - texlive-dvips
-         - java-devel-openjdk
-         - gcc-gfortran
-         - compat-gcc-34-g77
-         - dejagnu 
-         - expect 
-         - emacs 
-         - imake 
-         - python-docutils
-        - gcc-c++
-        - gcc-java
-        - libgcj
-        - java-1.6.0-openjdk-devel
-        - zip
-        - unzip
-        - expat-devel
-        - cvs
-
-     - newt (newt-devel)
-      - python-devel
-
-      - slang-devel
-      - docbook-utils
-    - glibc
-
-    - sed 
-    - gawk 
-    - libcap-ng-devel
-   - pkgconfig
- - openssl-devel 
- - gmp-devel
- - gdbm-devel
- - zlib-devel
- - libGL-devel
- - tk
- - tix
- - libX11-devel
- - glibc-devel
- - bzip2
- - tar 
- - /usr/bin/find
- - pkgconfig
- - tcl-devel
- - tk-devel
- - tix-devel
- - bzip2-devel
- - sqlite-devel
- - autoconf
- - db4-devel
- - libffi-devel
- - valgrind-devel
- - systemtap-sdt-devel 
-
-
+attr
+libattr
+libattr-devel
+- gettext, libtool
