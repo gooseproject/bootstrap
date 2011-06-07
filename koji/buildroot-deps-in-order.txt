@@ -62,6 +62,10 @@ make *
 patch *
 - libselinux (libselinux-devel)
 
+pkgconfig *
+pkg-config
+- NO DEPS
+
 redhat-rpm-config *
 - coreutils
 
