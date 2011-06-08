@@ -97,22 +97,22 @@ schedutils
 setarch *
 - audit-libs (audit-libs-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), pam (pam-devel), texinfo, zlib (zlib-devel), popt (popt-devel), libutempter (libutempter-devel), autoconf, automake, coreutils, udev, pkgconfig, shadow-utils
 
-which
+which *
 - readline (readline-devel), texinfo (info)
 
-xz
+xz *
 xz-libs
 xz-devel
 xz-lzma-compat
-lzma
+lzma *
 - pkgconfig
 
 -----------------------end buildroot-------------------------------------
 
-bison
+bison *
 - m4, java-1.6.0-openjdk (java-1.6.0-openjdk-devel), texinfo (info)
 
-setup
+setup *
 - bash, tcsh, perl
 
 audit-libs 
@@ -413,10 +413,35 @@ DeviceKit
 DeviceKit-devel
 - bash, fileutils chkconfig, initscripts, coreutils, sysvinit-tools, MAKEDEV, glibc-common, shadow-utils, hwdata, sed, libselinux (libselinux-devel), flex, libsepol (libsepol-devel), glib2 (glib2-devel), bison, findutils, gperf, libtool, libusb (libusb-devel), acl (libacl-devel), libxslt, gtk-doc, usbutils, util-linux-ng
 
+m4 * 
+- texinfo (info)
 
+java-1.6.0-openjdk
+java-1.6.0-openjdk-devel
+java-1.6.0-openjdk-demo
+java-1.6.0-openjdk-src
+java-1.6.0-openjdk-javadoc
+jre-1.6.0-openjdk
+jre-openjdk
+jre-1.6.0
+java-1.6.0
+jre
+java-openjdk
+java
+jndi
+jndi-ldap
+jndi-cos
+jndi-rmi
+jndi-dns
+jaas
+jsse
+jce
+jdbc-stdext
+java-sasl
+java-fonts
+- autoconf, automake, alsa-lib (alsa-lib-devel), cups (cups-devel), desktop-file-utils, giflib (giflib-devel), libX11 (libX11-devel), libXi (libXi-devel), libXp (libXp-devel), libXt (libXt-devel), libXtxt (libXtst-devel), libjpeg (libjpeg-devel), libpng (libpng-devel), wget, xalan-j2, xerces-j2, xorg-x11-proto (xorg-x11-proto-devel), mercurial, ant, ant-nodeps, libXinerama (libXinerama-devel), rhino, redhat-lsb, xorg-x11-server-Xvfb, xorg-x11-fonts-Type1, xorg-x11-fonts-misc, freetype (freetype-devel), fontconfig, ecj, at-spi (at-spi-devel), gawk, libbonobo (libbonobo-devel), pkgconfig, xorg-x11-utils, pulseaudio, pulseaudio-libs (pulseaudio-libs-devel), libffi (libffi-devel), openssl, prelink, systemtap-sdt (systemtap-sdt-devel), jakarta-commons-logging, rhino, libjpeg, ca-certificates, jpackage-utils, tzdata-java, chkconfig
 
-
-
+swig
 
 
 
