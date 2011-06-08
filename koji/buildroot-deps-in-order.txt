@@ -7,6 +7,7 @@ bash *
 - ncurses-libs, texinfo, bison, ncurses (ncurses-devel), autoconf, gettext
 
 bzip2 *
+bzip2-devel
 bzip2-libs
 - NO DEPS
 
@@ -69,16 +70,16 @@ rpm *
 rpm-build *
 - coreutils, popt (popt-devel), curl, db4 (db4-utils, db4-devel), fakechroot, redhat-rpm-config, gawk, elfutils (elfutils-devel), elfutils-libelf (elfutils-libelf-devel), readline (readline-devel), nss (nss-devel), file (file-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), bzip2 (bzip2-devel), python (python-devel), lua (lua-devel), libcap (libcap-devel), acl (libacl-devel), autoconf, xz (xz-devel), sqlite (sqlite-devel), findutils, sed, grep, diffutils, patch, unzip, gzip, cpio, lzma, pkgconfig, gdb, crontabs, logrotate
 
-sed
+sed *
 - glibc (glibc-devel), libselinux (libselinux-devel), texinfo (info)
 
-shadow-utils
+shadow-utils *
 - setup, audit-libs (audit-libs-devel), libselinux (libselinux-devel)
 
-tar
+tar *
 - texinfo (info), autoconf, automake, gzip, gettext, acl (libacl-devel), gawk, rsh, libselinux (libselinux-devel)
 
-unzip
+unzip *
 - bzip2 (bzip2-devel)
 
 util-linux-ng
@@ -102,7 +103,8 @@ bison
 setup
 - bash, tcsh, perl
 
-audit-libs (audit-libs-devel)
+audit-libs 
+audit-libs-devel
 - swig, python (python-devel), tcp_wrappers (tcp_wrappers-devel), libcap-ng (libcap-ng-devel), kernel (kernel-headers), chkconfig, coreutils, openldap (openldap-devel)
 
 acl
@@ -175,7 +177,7 @@ libtool-ltdl
 dejagnu
 - expect, screen, texinfo (info)
 
-byacc
+byacc *
 - NO DEPS
 
 binutils
@@ -207,11 +209,8 @@ gdb
 ecj
 - gcc-java, java-1.5.0-gcj-devel, java-gcj-compat, ant, libgcj
 
-zip
+zip *
 - NO DEPS
-
-unzip 
-- bzip2 (bzip2-devel)
 
 elfutils
 elfutils-devel
@@ -285,7 +284,7 @@ libXt
 libXt-devel
 - xorg-x11-proto (xorg-x11-proto-devel), libX11 (libX11-devel), libSM (libSM-devel)
 
-pcre
+pcre *
 pcre-devel
 - NO DEPS
 
@@ -327,7 +326,6 @@ libcurl-devel
 fakechroot
 fakechroot-libs
 - autoconf, automake, libtool
-
 
 nss
 nss-devel
@@ -375,11 +373,15 @@ pkgconfig *
 pkg-config
 - NO DEPS
 
+rsh
+rsh-server
+- perl, ncurses (ncurses-devel), pam (pam-devel), audit-libs (audit-libs-devel), xinetd
 
+pam
+pam-devel
+- cracklib (cracklib-dicts, cracklib-devel), coreutils, autoconf, automake, libtool, bison, flex, sed, perl, pkgconfig, gettext, , audit-libs (audit-libs-devel), libselinux (libselinux-devel), glibc, db4 (db4-devel), linuxdoc-tools, w3m, libxslt, docbook-style-xsl, docbook-dtds
 
-
-
-
+libutempter (libutempter-devel)
 
 
 
