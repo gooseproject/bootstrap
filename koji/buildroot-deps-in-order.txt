@@ -82,8 +82,20 @@ tar *
 unzip *
 - bzip2 (bzip2-devel)
 
-util-linux-ng
-- audit-libs (audit-libs-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), pam (pam-devel), texinfo, zlib (zlib-devel), popt (popt-devel), libutempter (libutempter-devel), autoconf, automake, coreutils, libuuid, libblkid, udev, pkgconfig, shadow-utils
+util-linux-ng *
+util-linux
+libblkid
+libblkid-devel
+libblkid-static
+libuuid
+libuuid-devel
+libuuid-static
+uuidd
+mount
+losetup
+schedutils
+setarch *
+- audit-libs (audit-libs-devel), gettext (gettext-devel), libselinux (libselinux-devel), ncurses (ncurses-devel), pam (pam-devel), texinfo, zlib (zlib-devel), popt (popt-devel), libutempter (libutempter-devel), autoconf, automake, coreutils, udev, pkgconfig, shadow-utils
 
 which
 - readline (readline-devel), texinfo (info)
@@ -381,10 +393,25 @@ pam
 pam-devel
 - cracklib (cracklib-dicts, cracklib-devel), coreutils, autoconf, automake, libtool, bison, flex, sed, perl, pkgconfig, gettext, , audit-libs (audit-libs-devel), libselinux (libselinux-devel), glibc, db4 (db4-devel), linuxdoc-tools, w3m, libxslt, docbook-style-xsl, docbook-dtds
 
-libutempter (libutempter-devel)
+libutempter
+libutempter-devel
+utempter
+- shadow-utils, glibc
 
-
-
+udev
+udev-persistent
+udev-extras
+libudev
+libudev-devel
+libudev0
+libgudev
+libgudev-devel
+libgudev1
+libgudev1-devel
+dev
+DeviceKit
+DeviceKit-devel
+- bash, fileutils chkconfig, initscripts, coreutils, sysvinit-tools, MAKEDEV, glibc-common, shadow-utils, hwdata, sed, libselinux (libselinux-devel), flex, libsepol (libsepol-devel), glib2 (glib2-devel), bison, findutils, gperf, libtool, libusb (libusb-devel), acl (libacl-devel), libxslt, gtk-doc, usbutils, util-linux-ng
 
 
 
