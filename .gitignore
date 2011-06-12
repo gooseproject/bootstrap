@@ -5,3 +5,8 @@ logs/
 specs/
 requires/
 .*.sw[po]
+*.py[co]
+
+# ignore files with sensitive data
+gh_settings.py
+github_settings.py
