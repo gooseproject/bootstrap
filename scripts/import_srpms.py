@@ -10,16 +10,6 @@ import subprocess
 # import the rpm parsing stuff
 import rpm
 
-login = os.getenv('LOGNAME')
-home = os.environ['HOME']
-
-install_root = u"/tmp/projects"
-
-projects_dir = u"Projects"
-base_dir = u"%s/%s" % (home, projects_dir)
-git_dir = u"%s/%s" % (base_dir, 'gooseproject')
-github_base = u"git@github.com:gooseproject"
-lookaside_dir = u"%s/%s/%s" % (base_dir, 'gooseproject', 'lookaside')
 
 def import_srpms(args):
 
@@ -54,9 +44,10 @@ def import_srpms(args):
         args = ["/bin/rpm", "-i", "--root=%s/%s" % (install_root, name), "%s/%s" % (path, srpm)]
         p = subprocess.Popen(args)
 
+        time.sleep(2)
+
         path_to_sources = u"%s/%s%s/%s" % (install_root, name, home, 'rpmbuild/SOURCES')
         dest_to_sources = u"%s/%s" % (lookaside_dir, name)
-
 
         path_to_spec = u"%s/%s%s/%s/%s.spec" % (install_root, name, home, 'rpmbuild/SPECS', name)
         dest_to_spec = u"%s/%s" % (git_dir, name)
