@@ -10,6 +10,8 @@ import subprocess
 # import the rpm parsing stuff
 import rpm
 
+from goose_settings import *
+
 
 def import_srpms(args):
 
