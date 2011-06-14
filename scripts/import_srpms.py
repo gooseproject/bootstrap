@@ -7,11 +7,17 @@ import shutil
 import argparse
 import subprocess
 
+# import our basic settings
+from goose_settings import *
+
 # import the rpm parsing stuff
 import rpm
 
-from goose_settings import *
+# import github creation 
+from create_gh_repo import *
 
+# import git repo creation
+from create_git_repo import *
 
 def import_srpms(args):
 
@@ -68,6 +74,15 @@ def import_srpms(args):
         if not os.path.isdir(u"%s" % (dest_to_spec)):
             os.makedirs(u"%s" % (dest_to_spec), 0775)
 
+        # create the github repo
+
+        create_gh_repo(name, github_org)
+
+        # initialize dest_to_sources as a git repo
+        # before copying the data over
+
+        create_git_repo(dest_to_spec, u"%s/%s.git" %(github_base, name))
+
         # copy the spec file
         shutil.copy2(path_to_spec, dest_to_spec)
 
@@ -92,4 +107,4 @@ def main():
     args.func(args)
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
