@@ -1,0 +1,593 @@
+2011-04-12 15:20:47	shalkie	Ay yea... Dag wieers has put out the feelers for a community built RHEL spin. It has already been shooshed on the CentOS mailing list.
+2011-04-12 15:34:24	goozbach	shalkie: linky?
+2011-04-12 15:34:36	goozbach	I'd be interested in helping with that
+2011-04-12 15:34:42	goozbach	I respect the hell out of Dag
+2011-04-12 15:36:56	@herlo	shalkie: really? I'd like to see that too
+2011-04-12 15:48:00	goozbach	found it: http://lists.centos.org/pipermail/centos/2011-April/109827.html
+2011-04-12 15:49:26	goozbach	tweet in question: http://twitter.com/#!/dagwieers/status/57563280260087808
+2011-04-12 16:01:54	shalkie	Sorry Goozbach, I should have sent that.
+2011-04-12 16:02:10	shalkie	herlo: Yeah. I have already voluntered, but am a bit cash strapped.
+2011-04-12 16:02:25	@herlo	it requires money??
+2011-04-12 16:02:46	shalkie	Not that I know, but his question was about getting funds:
+2011-04-12 16:03:01	@herlo	oh, haven't had time to read up
+2011-04-12 16:03:13	shalkie	" Anyone willing to fund a RHEL rebuild project with timely releases, transparent processes and fosters community involvement ?"
+2011-04-12 16:03:38	goozbach	someone who has a spare license should spin up a RHEL box, download all the SRPMS, setup koji and go to town
+2011-04-12 16:03:53	goozbach	I think the centos community is getting burnt out
+2011-04-12 16:04:16	goozbach	their current infrastructure isn't allowing them to move at the speed that their "customers" expect
+2011-04-12 16:04:37	@herlo	goozbach: I think I could fulfill your first statement
+2011-04-12 16:04:45	goozbach	s/infrastructure/infrastructure, policies, and core team/
+2011-04-12 16:04:46	infobot	goozbach meant: their current infrastructure, policies, and core team isn't allowing them to move at the speed that their "customers" expect
+2011-04-12 16:06:08	goozbach	I wonder how much a EC2 instance which could run koji to do this would cost per month
+2011-04-12 16:06:20	@herlo	goozbach: I think you'd need a few doezen boxes for building, mailing list, etc...
+2011-04-12 16:06:32	@herlo	well, at least a dozen
+2011-04-12 16:06:36	fozzmoo	GoozbachOS
+2011-04-12 16:06:41	shalkie	To make matters worse, they hold the community at arms length. There was a thread not to long ago where Dag brought up the fact that there could be more community involvement in the build process and more transparent processes. He got roughly rebuked.
+2011-04-12 16:06:48	fozzmoo	GoOS.
+2011-04-12 16:06:51	@herlo	lol
+2011-04-12 16:06:55	@herlo	GoozOS
+2011-04-12 16:06:59		herlo likes that
+2011-04-12 16:07:15	fozzmoo	Yeah, that'll win the suits over.
+2011-04-12 16:07:18	shalkie	GoOSe? The dev project could be called Maverick?
+2011-04-12 16:07:45	goozbach	I like GoOSe
+2011-04-12 16:07:54	@herlo	lol
+2011-04-12 16:07:58	goozbach	shalkie: the first release would be maverick
+2011-04-12 16:08:12	goozbach	herlo: how a dozen?
+2011-04-12 16:08:17	goozbach	code on github
+2011-04-12 16:08:25	goozbach	mailing list on google groups
+2011-04-12 16:08:54	@herlo	building different arches, deployment, mirroring, etc
+2011-04-12 16:08:59	goozbach	one RHEL box with a subscription to get notified of updates and download the SRPM using yum
+2011-04-12 16:09:11	@herlo	maybe
+2011-04-12 16:09:20	goozbach	one box running koji
+2011-04-12 16:09:35	goozbach	one webhost with rsync/ftp/http
+2011-04-12 16:09:36	@herlo	bodhi
+2011-04-12 16:09:38	goozbach	boom done
+2011-04-12 16:09:41	fozzmoo	Maybe CentOS only has one box and they've been rpmbuild-ing packages since RHEL6 came out. :)
+2011-04-12 16:09:58	goozbach	bodhi?
+2011-04-12 16:10:00	@herlo	mirrors
+2011-04-12 16:10:25	shalkie	Apparently they have a number of boxes, but they aren't actually owned by the project. I guess they are volunteered from various companies and people.
+2011-04-12 16:10:31	@herlo	goozbach: it's the service that lets one download and test packages, give karma, etc
+2011-04-12 16:10:36	goozbach	ahh
+2011-04-12 16:10:41	shalkie	I have thing2 sitting here. And I am looking at getting an old 1U server from the U.
+2011-04-12 16:10:45	goozbach	is it resource intensive?
+2011-04-12 16:11:19	goozbach	supermicro has a new four-way box (four servers in 2RMU) redundant power shared among the four.
+2011-04-12 16:11:34	goozbach	if we could get one of those hosted somewhere we'd be in a good spot
+2011-04-12 16:11:35		fozzmoo drools
+2011-04-12 16:11:52	shalkie	Nice. My budget is around the $40 the old server costs. :-)
+2011-04-12 16:11:57	goozbach	to have GoOSe hosted
+2011-04-12 16:12:18	shalkie	What about a linode system?
+2011-04-12 16:13:01	goozbach	couldn't bodhi and koji and the web host be all on the same box?
+2011-04-12 16:13:05	shalkie	Don't think it would have the build power of an EC2 system, but certainly have some.
+2011-04-12 16:14:53	fozzmoo	My brother in law says GoOSe reminds him too much of "goatse"
+2011-04-12 16:15:32	fozzmoo	Just call it utosOS. :)
+2011-04-12 16:16:32	goozbach	OSUTOS
+2011-04-12 16:16:46	fozzmoo	Or backwards: SOTUSO
+2011-04-12 16:17:07	goozbach	OSoUTOS
+2011-04-12 16:17:20	goozbach	operatingsystem of utahopensource
+2011-04-12 16:25:32	@herlo	nice
+2011-04-12 16:26:50		Jayce^ can't wait for the first flamewar when some package isn't included...
+2011-04-12 16:27:01	Jayce^	*somebody* will claim it's church direction :-D
+2011-04-12 16:28:35	goozbach	bhahaha
+2011-04-12 16:28:55	goozbach	I did some calculations
+2011-04-12 16:29:01	goozbach	we could bootstrap with 4 servers
+2011-04-12 16:29:30	@herlo	goozbach: I could see that
+2011-04-12 16:29:41	goozbach	1) bastion host: runs puppetmaster, freeIPA; acts as account management server
+2011-04-12 16:29:46	@herlo	I'm fairly interested in helping with that
+2011-04-12 16:29:47	shalkie	I have some servers hanging around.
+2011-04-12 16:29:48	goozbach	2) buildsys
+2011-04-12 16:29:57	goozbach	runs koji and bodhi
+2011-04-12 16:30:04	goozbach	uses kerb from bastion host
+2011-04-12 16:30:11	@herlo	you'd probably need a second buildsystem
+2011-04-12 16:30:22	@herlo	depending on how heavy things got, but maybe not at first
+2011-04-12 16:30:44	@herlo	seeing as koji can pass off building to other services, we could bootstrap to one of the other machines
+2011-04-12 16:30:52	@herlo	s/services/systems/
+2011-04-12 16:30:53	infobot	herlo meant: seeing as koji can pass off building to other systems, we could bootstrap to one of the other machines
+2011-04-12 16:31:01	goozbach	3) downloads.$PROJ: hosts public httpd downloads, rsync downloads, ftp downloads, and public main www for project
+2011-04-12 16:31:26	goozbach	3) private host:  acts as RSYNC master for all approved top-level mirrors
+2011-04-12 16:31:35	goozbach	4) private host:  acts as RSYNC master for all approved top-level mirrors
+2011-04-12 16:31:35	@herlo	s/3/4/
+2011-04-12 16:31:39	@herlo	:)
+2011-04-12 16:32:00	goozbach	get xmission and a few other places which we have connections to be our first miirors
+2011-04-12 16:32:00	@herlo	what kind of disk space will we need?
+2011-04-12 16:32:06	goozbach	xmission UofU, BYU
+2011-04-12 16:32:09	@herlo	sure sure, not a biggie
+2011-04-12 16:32:09	goozbach	GT 
+2011-04-12 16:32:11	goozbach	UGA
+2011-04-12 16:32:23	goozbach	herlo: that's the sticky one
+2011-04-12 16:32:38	goozbach	koji/bodhi would eat a great deal
+2011-04-12 16:32:42	@herlo	indeed, I'm guessing in the 2-4TB range
+2011-04-12 16:33:02	@herlo	which isn't horrible
+2011-04-12 16:33:03	fozzmoo	I was just talking to a mutual friend of ours... about hosting a 2U (4 node) machine.
+2011-04-12 16:33:19	goozbach	all the other stuff
+2011-04-12 16:33:28	goozbach	bugtracker/source code
+2011-04-12 16:33:30	goozbach	github
+2011-04-12 16:33:34	goozbach	mailing list google groups
+2011-04-12 16:33:39	goozbach	and POW!
+2011-04-12 16:33:40	goozbach	done
+2011-04-12 16:34:01	@herlo	hmm
+2011-04-12 16:34:03	goozbach	you have a completely transparent, easily extensible distro
+2011-04-12 16:34:34	goozbach	only server not directly accessable is the bastion host/puppet server
+2011-04-12 16:34:43	goozbach	ie HTTP/FTP/ETC
+2011-04-12 16:36:17	goozbach	and we'd have a channel here on freenode
+2011-04-12 16:38:51	fozzmoo	Never mind. Still in the out of the way corner.
+2011-04-12 16:45:54	fozzmoo	http://www.newegg.com/Product/Product.aspx?Item=N82E16816101329
+2011-04-12 16:45:56	fozzmoo	Only $3k
+2011-04-12 17:05:40	shalkie	Hmmm... #goose is taken it appears.
+2011-04-12 17:09:26	goozbach	fozzmoo: is it 3k for barebones or ready to use?
+2011-04-12 17:09:31	goozbach	would we have to supply disks?
+2011-04-12 17:09:41	fozzmoo	barebones.
+2011-04-12 17:09:47	fozzmoo	No CPUs, No RAM, no disks.
+2011-04-12 17:10:15	goozbach	oohh
+2011-04-12 17:10:23	goozbach	that's gonna add to the cost
+2011-04-12 17:10:43	fozzmoo	Yeah. Apparently whipping up a CentOS competitor is not cheap.
+2011-04-12 17:11:10	fozzmoo	I'd ballpark the hardware to be around $8-10k
+2011-04-12 17:13:59	goozbach	http://www.siliconmechanics.com/i27502/Opteron-2U-4-Node.php
+2011-04-12 17:14:06	goozbach	that's a supermicro integrator
+2011-04-12 17:14:17	goozbach	and the server we have sitting on our bar right now
+2011-04-12 17:16:27	fozzmoo	Only 8 core CPUs? ;-)
+2011-04-12 17:16:49	goozbach	$7475
+2011-04-12 17:16:51	goozbach	http://www.siliconmechanics.com/quotes/201605?confirmation=127156574
+2011-04-12 17:16:58	goozbach	thats minimim price
+2011-04-12 17:17:02	fozzmoo	Hmmm. Replacing them with 12-core CPUs would only add $4400 or so to the cost. :)
+2011-04-12 17:17:03	goozbach	one CPU per node
+2011-04-12 17:17:18	goozbach	who's in?
+2011-04-12 17:17:50	fozzmoo	$7475... that's $3737 between the two of us, goozbach.
+2011-04-12 17:19:09	goozbach	16TB should be enough storage to start, no?
+2011-04-12 17:19:37	goozbach	well 12 and parity
+2011-04-12 17:20:01	fozzmoo	That's what Bill Gates said.
+2011-04-12 17:20:04	fozzmoo	Or something like htat.
+2011-04-12 17:35:04	goozbach	oh yes
+2011-04-12 17:35:17	goozbach	that also includes a subscription to RHEL6 for one of the nodes
+2011-04-12 17:35:19	goozbach	:)
+2011-04-12 17:36:48	goozbach	who else wants to pony up some monies?
+2011-04-12 17:36:57	goozbach	spread thin enough it becomes doable
+2011-04-12 17:37:49	goozbach	I do like GooZe Linux
+2011-04-12 17:37:59	goozbach	or GoOSe Linux
+2011-04-12 17:42:32	fozzmoo	Yo don't like SOTUSO? :)
+2011-04-12 17:43:26	goozbach	GoOSe Linux rolls off the tounge easier
+2011-04-12 17:44:37	goozbach	heck before we buy this, who has servers sitting doing nothing?
+2011-04-12 17:44:41	goozbach	let's try to build it
+2011-04-12 17:45:01	fugue88	I've got an Atom processor sitting mostly idle...
+2011-04-12 17:48:41	shalkie	I have some spare hardware. All older stuff though. I have a couple older Suns (Including a cobalt qube3), an older pentium system and I am going to go snag a system from the U for various reasons. ;-)
+2011-04-12 17:49:02	shalkie	And that doesn't involve the two packard bell pentium systems. :-D
+2011-04-12 17:50:10	shalkie	Oh and a laptop or two hanging around that are going idle as well. Oh and the HP PA Risc system.
+2011-04-12 17:50:51	shalkie	I know I have some more hardware, but all older...
+2011-04-12 17:52:24	fugue88	Sounds like we've got ourselves a cloud!
+2011-04-12 17:52:38	fugue88	goozbach: Let's get started, already.
+2011-04-12 17:52:55	fugue88	;)
+2011-04-12 19:49:00	shalkie	Dag responded through twitter (and the CentOS mailing list). Apparently he isn't starting his own spin. :-( Though his comment to me was that there seemed to be plenty of interest.
+2011-04-12 19:49:08	shalkie	I like the idea of doing goose though.
+2011-04-12 19:57:27	@herlo	shalkie: what does goose stand dor?
+2011-04-12 19:57:28	@herlo	for
+2011-04-12 19:58:45	shalkie	It was a play off of GoozOS.
+2011-04-12 19:58:58	@herlo	right, but it should stand for something
+2011-04-12 19:59:13	@herlo	like 'Good Old Operating System Environment'
+2011-04-12 19:59:41	@herlo	'Goozbach's Ornate OS Extraordinaire'
+2011-04-12 20:01:49	shalkie	heh. Not bad. I could see that. I like the use of extraordinarily ornate name. :-)
+2011-04-12 20:02:13	@herlo	lol
+2011-04-12 20:02:14	goozbach	grand orderly operating system environment
+2011-04-12 20:02:45	goozbach	i think the last three words are a good lock
+2011-04-12 20:03:05	@herlo	Grand Old OS Exchange
+2011-04-12 20:12:24	shalkie	Eh. Not sold on the Exchange part.
+2011-04-12 20:12:38	shalkie	Regardless of the name, I like the idea.
+2011-04-12 20:14:18	@herlo	it was a goofy name, just mucking around
+2011-04-12 20:15:28	@herlo	Generic Oriented OS Environment
+2011-04-12 20:18:27	shalkie	Gandardized Open Operating System Edition?
+2011-04-12 20:19:15	shalkie	'Cause whats good for the goose is good for the gander..
+2011-04-12 20:19:25	shalkie	s/Gandar/Gander/
+2011-04-12 20:19:50	@herlo	Get Our Outrageously Sweet Ecosystem
+2011-04-12 20:25:41	@herlo	Go On Open Said Envelope
+2011-04-12 20:32:43	goozbach	isn't this what kickstarter is for?
+2011-04-12 20:33:28	goozbach	G could be for generic
+2011-04-12 20:33:45	goozbach	Genric <SOMETHING> Operating System Environment
+2011-04-12 20:34:04	goozbach	Generic Open Operating System Environment
+2011-04-12 20:36:09	goozbach	We could have a quacking like sound for startup
+2011-04-12 20:36:15	goozbach	and a Goose as a mascot
+2011-04-12 20:37:45	Nafai	Have you been "GOOSEd"?
+2011-04-12 20:39:03	goozbach	nice!
+2011-04-12 20:39:17	goozbach	that's a good bumper sticker / Tshirt idea
+2011-04-12 20:41:03	shalkie	I like it.
+2011-04-12 20:46:40	Nafai	heh
+2011-04-12 20:53:08	goozbach	I'm mirroring the SRPMS to my laptop to see how big one of the releases is
+2011-04-12 21:05:12	goozbach	I bet if we started building packages Wiers would jump in
+2011-04-12 21:07:04	@herlo	goozbach: let's get some machines
+2011-04-12 21:07:14	@herlo	I'll be happy to help
+2011-04-12 21:08:42	shalkie	I say we see if herlo is interested in hosting. He has a nice Utopia connection.
+2011-04-12 21:09:10	goozbach	does anyone have a private github account we could use?
+2011-04-12 21:09:14	shalkie	Yeah. They are a nice little place. Do a live band fairly often. Litterally a nieghborhood pub.
+2011-04-12 21:09:19	goozbach	I've got a couple of scripts written now
+2011-04-12 21:09:31	goozbach	don't want to tip our hand too soon
+2011-04-12 21:09:32		shalkie nudges herlo for some rack space.
+2011-04-12 21:10:43	@herlo	shalkie: I have *no* *such* *thing*
+2011-04-12 21:11:05	@herlo	goozbach: how much do they cost?
+2011-04-12 21:11:06	shalkie	Herlo: You don't have a Utopia connection?
+2011-04-12 21:11:36		shalkie blinks innocently
+2011-04-12 21:14:00	@herlo	no, never have
+2011-04-12 21:14:00	goozbach	redhat may be bw limiting
+2011-04-12 21:14:36	@herlo	goozbach: you mean for you downloading the packages?
+2011-04-12 21:15:14	goozbach	nevermind
+2011-04-12 21:15:18	goozbach	networkhickup
+2011-04-12 21:15:23	goozbach	downloading client now
+2011-04-12 21:15:29	goozbach	er the Client packages
+2011-04-12 21:16:22	@herlo	goozbach: are you downloading src.rpms? or what?
+2011-04-12 21:17:51	goozbach	herlo: yeah
+2011-04-12 21:17:57	goozbach	to my laptop
+2011-04-12 21:18:03	goozbach	to see how much space they take
+2011-04-12 21:18:08	@herlo	right-o
+2011-04-12 21:18:18		herlo wishes he had decent bandwidth to help the cause
+2011-04-12 21:18:34	@herlo	crappy hotel wifi
+2011-04-12 21:18:41	goozbach	herlo: you familar with freeipa?
+2011-04-12 21:18:44	goozbach	we need that first
+2011-04-12 21:19:52	@herlo	goozbach: a little
+2011-04-12 21:19:58	@herlo	I've setup 389ds
+2011-04-12 21:20:06	@herlo	but not the kerberos or other parts
+2011-04-12 21:20:27	@herlo	I don't currently have time to set it up though
+2011-04-12 21:20:34	goozbach	we need kerb for koji 
+2011-04-12 21:20:36	@herlo	I will probably have time next week
+2011-04-12 21:20:49	goozbach	someone needs to learn how to set that up
+2011-04-12 21:21:01	@herlo	yeah, I've seen and mucked with koji
+2011-04-12 21:21:09	@herlo	but it was already setup
+2011-04-12 21:23:53	goozbach	well gotta go put the baby down
+2011-04-12 21:23:56	goozbach	or dishes
+2011-04-12 21:24:02	goozbach	whichever the wifey doesn't want
+2011-04-12 21:24:31	goozbach	your homework is to think about rewards which could be used for kickstarter type funding
+2011-04-12 21:27:03	@herlo	indeed
+2011-04-12 21:33:04	shalkie	herlo: I am sorry. I thought you had Utopia at home.
+2011-04-12 21:33:19	shalkie	Hopefully they will finish the freakin' murray build out.
+2011-04-12 21:33:25	@herlo	shalkie: it doesn't mattter
+2011-04-12 21:33:30	@herlo	s/ttt/tt/
+2011-04-12 21:33:31	infobot	herlo meant: shalkie: it doesn't matter
+2011-04-12 21:33:55	@herlo	because even if they finish out the buildout, Utopia won't put it into Applegate without 100% acceptance
+2011-04-12 21:34:05	shalkie	That sucks.
+2011-04-12 21:34:50	@herlo	that's 300+ people which can *never* agree, would have to allow themselves to be charged $150 or so to put internet into their house, which they technically already have via comcast for qworst
+2011-04-12 21:35:04	@herlo	even if it's better, they won't want it because it costs money
+2011-04-12 21:35:13		herlo thinks people in HOAs are dumb
+2011-04-12 21:35:20	@herlo	including himself
+2011-04-12 22:02:17	harleypig	can anyone tell me what nepomukserver is and why I wo uld want it running on my system?
+2011-04-12 22:02:31	harleypig	wtf? Social Semantic Desktop?
+2011-04-12 22:02:33	harleypig	wtf is that?
+2011-04-12 22:07:13	harleypig	doing a 'sudo aptitude purge libnepomuk4 libnepomukquery4a' wants to delete most of my kde installation ....
+2011-04-12 22:23:53	shalkie	Herlo: I have been seeing a beer and bash or something along those lines reoccuring in the Portland area. Think hacknights at pub.
+2011-04-12 22:24:14	@herlo	shalkie: along what lines?
+2011-04-12 22:28:01	fugue88	herlo: What if half the people at Applegate want it, and are willing to pay $300 each?
+2011-04-12 22:29:14	@herlo	nope
+2011-04-12 22:29:22	@herlo	it was an all or nothing thing
+2011-04-12 22:29:32	@herlo	some stipulation from Utopia, actually
+2011-04-12 22:29:49	@herlo	btw, I think it was more like 80% had to commit and everyone would have to pay
+2011-04-12 22:31:04	shalkie	herlo: I think they called it Beer and Bash. I have been looking but haven't found one of the references. Beer and Coding. Sounds like a winner to me. :-)
+2011-04-13 00:02:22	goozbach	Submitted for comment(this is a draft, don't publish elsewhere please): http://blog.friocorte.com/2011/04/bb9b253795c5b770bba1707f9dca030a3161662f.html?235954
+2011-04-13 00:02:44	goozbach	let me know if I need to add/subtract anything and I'll publish it sometime tomrrow
+2011-04-13 00:03:06		herlo looks
+2011-04-13 00:06:44	goozbach	bear in mind I'm really tired too
+2011-04-13 00:06:46	goozbach	:)
+2011-04-13 00:07:26	@herlo	goozbach: why is openclue there?
+2011-04-13 00:07:39	@herlo	as a category, is that just how you get it on the utos planet?
+2011-04-13 00:08:00		herlo will definitely have to sleep on the proposal, but I like where it's going
+2011-04-13 00:08:54	fozzmoo	:)
+2011-04-13 00:19:58	goozbach	herlo: no idea why it's there.
+2011-04-13 00:20:17	goozbach	I did have a per-category feed going to openclue
+2011-04-13 00:20:20	@herlo	maybe it's a default category?
+2011-04-13 00:20:32	goozbach	yeah
+2011-04-13 00:21:57	@herlo	kk, no worries, just thought you'd like to know
+2011-04-13 00:22:15	goozbach	3.6G of SRPMS and growing
+2011-04-13 00:22:26	goozbach	looks to be 800 or so of them
+2011-04-13 00:24:13	@herlo	fun
+2011-04-13 00:24:42	@herlo	goozbach: so, I guess you'd have to consider the Arches you'd support.  I'm thinking x86/x86_64 ootb, and maybe more as we grow
+2011-04-13 00:25:01	@herlo	PPC would probably be nice for some, ia64 for others
+2011-04-13 11:00:41	goozbach	one plaform done
+2011-04-13 11:00:48	goozbach	7.3 G of files
+2011-04-13 11:00:55	goozbach	I'm guessing there's a lot of overlap
+2011-04-13 11:42:35	shalkie	That is a lot of number crunching that would need to be done.
+2011-04-13 11:45:10	goozbach	started download of all the different spins
+2011-04-13 11:45:14	goozbach	I'm sure there's overlap
+2011-04-13 11:45:18	goozbach	I'm gonna figure how much
+2011-04-13 11:54:41	shalkie	I tested out an o'reilly book on one recently and even the sample doesn't let you zoom into the diagrams. :-(
+2011-04-13 12:38:31	goozbach	any further comments on my blog draft?
+2011-04-13 12:38:37	goozbach	Submitted for comment(this is a draft, don't publish elsewhere please): http://blog.friocorte.com/2011/04/bb9b253795c5b770bba1707f9dca030a3161662f.html?235954
+2011-04-13 12:39:05	@herlo	goozbach: I think it's good. I'll need to read it later on, but I can do that when it's published :)
+2011-04-13 12:42:59	shalkie	Goozbach: I like it. I do see some grammer and spelling issues.
+2011-04-13 12:43:47	shalkie	I am blaming them on the lack of sleep factor. ;-)
+2011-04-13 12:47:37	fugue88	grammar  :)
+2011-04-13 12:47:37	shalkie	See how easy it is to screw up? :-)
+2011-04-13 12:47:37	fugue88	heh
+2011-04-13 12:50:14	goozbach	shalkie: little help then?
+2011-04-13 12:55:43	shalkie	goozbach: Sure. Under the heading "A good model" you have "A good example of how to run a distro is the Fedora." Should probably just be "is Fedora."  Same heading: "Yes the Fedora project does..." I would probably put "Yes, the Fedora project does".  Though that might just be me.  No period on the first line under Bootstrapping. Under the header of Build system automate-able should be automatable.
+2011-04-13 12:55:51	shalkie	Back to teaching. Sorry.
+2011-04-13 13:28:45	goozbach	Blog post up: @dagwieers Some friends and I did some thinking on this very topic.
+2011-04-13 13:28:48	goozbach	http://bit.ly/gWvUi5
+2011-04-13 13:28:50	goozbach	doh
+2011-04-13 13:29:06	goozbach	there's my tweet *AND* blog post
+2011-04-13 13:29:07	goozbach	:)
+2011-04-14 17:53:58	shalkie	Goozbach: So what was the cross over on those packages?
+2011-04-14 17:54:20	goozbach	22 g
+2011-04-14 17:54:23	goozbach	total
+2011-04-14 17:54:42	goozbach	I can't get into my laptop at the moment (tis at home, and I guess my dhcp lease changed and DDNS didn't update)
+2011-04-14 17:55:08	goozbach	and I didn't have it on a filesystem which supported hardlinks so I couldn't easily calculate the cross over
+2011-04-14 17:55:13	goozbach	but I will tonight or tomorrow
+2011-04-14 17:55:14	shalkie	Wow. I didn't think it would be that big.
+2011-04-14 17:55:32	goozbach	there *HAS* to be lots of cross over
+2011-04-14 17:55:40	shalkie	You would think so.
+2011-04-14 17:58:55	@herlo	you two!!
+2011-04-14 17:58:57	@herlo	:)
+2011-04-14 18:08:06	shalkie	Goozbach: Was it RHEL6 src?
+2011-04-14 18:08:14	goozbach	shalkie: yeah
+2011-04-14 18:08:25	goozbach	used wget --mirror against ftp.rh
+2011-04-14 18:08:53	goozbach	 6client, 6workstation, 6computenode, and 6server
+2011-04-14 18:10:30	shalkie	Yaboot? Interesting.
+2011-04-14 18:10:40	goozbach	yaboot?
+2011-04-14 18:10:42	shalkie	Isn't Yaboot ppc?
+2011-04-14 18:11:17	shalkie	Huh. It is. It was in the srpms directory for 6Server.
+2011-04-14 18:11:33	shalkie	It is the PPC boot loader.
+2011-04-14 18:12:07	goozbach	yeah
+2011-04-14 18:12:20	goozbach	wouldn't be suprised if ppc isn't supported
+2011-04-14 18:12:30	@herlo	shalkie: ppc is supported in Fedora now iirc
+2011-04-14 18:12:37	goozbach	as there's IBM servers built with it
+2011-04-14 18:12:38	@herlo	again
+2011-04-14 18:12:55	shalkie	haha. That would be great "We are including the PPC boat loader, but we won't support that platform."
+2011-04-14 18:13:09	@herlo	indeed :)
+2011-04-14 18:13:22	shalkie	Might indicate future support though. I know that apple was talking about switching back to PPC if I remember correctly.
+2011-04-14 18:13:46	goozbach	back to ppc?
+2011-04-14 18:13:47	shalkie	Though sometimes I collect and misorganize random things.
+2011-04-14 18:13:50	goozbach	groahin
+2011-04-14 18:14:59	shalkie	groahin?
+2011-04-14 18:16:25	goozbach	it's a laboured groan
+2011-04-18 11:34:25	goozbach	finally got a number RE the SRPMS
+2011-04-18 11:34:39	goozbach	doing hardlink against the tree would save: 16222306304(bytes?)
+2011-04-18 11:41:11	@herlo	nice
+2011-04-18 12:02:21	goozbach	here's the bottom line:
+2011-04-18 12:02:25	goozbach	[root@ord-mandell 6]$ du -sh backup/
+2011-04-18 12:02:25	goozbach	23G     backup/
+2011-04-18 12:02:25	goozbach	[root@ord-mandell 6]$ du -sh ftp.redhat.com/
+2011-04-18 12:02:26	goozbach	7.3G    ftp.redhat.com/
+2011-04-18 12:02:45	goozbach	backup has the sources as copied from ftp.rh
+2011-04-18 12:02:55	goozbach	ftp.redhat has the hardlinked tree
+2011-04-18 12:02:58	goozbach	NICE!
+2011-04-18 12:03:25	fozzmoo	~congratulate goozbach
+2011-04-18 12:03:55	fozzmoo	~congratulate_dammit goozbach
+2011-04-18 12:13:48		pashdown checks last item off bucket list
+2011-04-18 12:56:04	@undertakingyou	ping herlo
+2011-04-18 14:31:23	goozbach	RE GoOSe: https://www.theopensourceway.org/wiki/Organizing_a_community_-_checklist
+2011-04-18 14:31:40	goozbach	and: http://iquaid.org/2011/04/18/a-checklist-for-organizing-a-community/
+2011-04-18 14:55:33	@herlo	goozbach: I <3 quaid
+2011-04-18 15:02:12	@herlo	goozbach: I think I've read both of those articles multiple times. I'll review them again this week
+2011-04-22 14:23:38	@herlo	goozbach: your message made it to my email
+2011-04-22 14:31:57	@herlo	goozbach: so, for GOOSe, I'm on board
+2011-04-22 14:32:17	@herlo	I think we can get GOOSe 6 out before CentOS 6 comes out :)
+2011-04-22 14:32:24	goozbach	probabally
+2011-04-22 14:32:28	goozbach	herlo: let's do it!
+2011-04-22 14:32:30	goozbach	YAYA!
+2011-04-22 14:32:48	goozbach	I was reading this and got excited
+2011-04-22 14:32:50	goozbach	https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community
+2011-04-22 14:33:06	@herlo	goozbach: I am getting Marred in 3 weeks, so I will be unavailable from the 13-21, but I think we can get more of it done...
+2011-04-22 14:33:12	@herlo	goozbach: yes, I've read those, quaid rules!
+2011-04-22 14:34:51	@herlo	goozbach: I'm sure we can worry more about the community itself as we build, no?
+2011-04-22 14:35:03	@herlo	I mean, sure. We do need people :)
+2011-04-22 14:35:25	goozbach	yeah
+2011-04-22 14:35:33	@herlo	goozbach: I can set up satellite server now :)
+2011-04-22 14:35:34	goozbach	we need a freeipa host
+2011-04-22 14:35:40	goozbach	first
+2011-04-22 14:35:54	@herlo	we could set up spacewalk and start building there!
+2011-04-22 14:36:03		herlo notes that spacewalk uses cobbler!!
+2011-04-22 14:36:19	@herlo	goozbach: why do we need a freeipa host?
+2011-04-22 14:36:29	goozbach	for koji to run
+2011-04-22 14:36:34	@herlo	couldn't we just use a windows Active Directory?
+2011-04-22 14:36:38	goozbach	koji needs a kerb domaain
+2011-04-22 14:36:39		herlo chuckles
+2011-04-22 14:36:42	goozbach	hah!
+2011-04-22 14:37:37	@herlo	goozbach: so where are we going to put this freeipa instance
+2011-04-22 14:38:48	goozbach	that is the question
+2011-04-22 14:39:07	goozbach	I've been trying to build it on a virt guest rhel6 runing on my laptop
+2011-04-22 14:39:18	goozbach	but that isn't accessable
+2011-04-22 14:39:21	@herlo	wow
+2011-04-22 14:39:31	@herlo	yeah, that'd suck
+2011-04-22 14:39:38	goozbach	I got it installed (rpm wise) but it doesn't work
+2011-04-22 14:39:44	@herlo	I guess that's the firest thing, hosting
+2011-04-22 14:39:54	goozbach	I'm thinking it'd be easier to use F15 beta for the freeipa install
+2011-04-22 14:40:01	@herlo	maybe
+2011-04-22 14:40:17	@herlo	but we do need our infra to be semi-stable at some point, I suppose
+2011-04-22 14:41:12	goozbach	yeah, but we'd be doing everything with scripts and kickstarts for anyone to take and build our infrastructure anywhere
+2011-04-22 14:41:38	@herlo	agreed
+2011-04-22 14:41:42	@herlo	that's not the issue
+2011-04-22 14:41:43	goozbach	which means, that apart from backing up the database, we can have a new instance built very rapidly
+2011-04-22 14:41:55	@herlo	yeah, it's all about having a place to put that stuff
+2011-04-22 14:42:26	@herlo	part of my impetus for this is to get to building infrastructure management tools that make tracking and using systems easier, overally
+2011-04-22 14:42:32	@herlo	s/lly/ll/
+2011-04-22 14:42:33	infobot	herlo meant: part of my impetus for this is to get to building infrastructure management tools that make tracking and using systems easier, overall
+2011-04-22 14:43:32	@herlo	goozbach: so let's figure out where to put it but I think I can probably get F15 beta installed and try to configure freeipa on my vm
+2011-04-22 14:43:43	@herlo	it already has F15 beta
+2011-04-22 14:44:02	goozbach	herlo: let's start a github org
+2011-04-22 14:44:20	@herlo	kk
+2011-04-22 14:44:23	@herlo	sounds good
+2011-04-22 14:44:41	goozbach	I'll start it
+2011-04-22 14:44:44	@herlo	did you want the repo to be private at first?
+2011-04-22 14:45:05		herlo will fund that if needed for a bit
+2011-04-22 14:45:18	goozbach	herlo: nah
+2011-04-22 14:45:22	goozbach	open from the start
+2011-04-22 14:45:37	@herlo	kk, I just recalled someone mentioning that is all
+2011-04-22 14:45:54	@herlo	might have been a different conversation
+2011-04-22 14:49:19	@herlo	goozbach: I'm 'herlo' on there
+2011-04-22 14:49:51	goozbach	who wants in other than herlo?
+2011-04-22 14:50:03	@herlo	goozbach: shalkie might
+2011-04-22 14:50:30	goozbach	 /msg me your google accounts
+2011-04-22 14:53:31	@herlo	goozbach: we should register gooseproject.org or something
+2011-04-22 14:53:59	goozbach	http://groups.google.com/group/goose-linux
+2011-04-22 14:55:31	@herlo	w00t!
+2011-04-22 14:55:57	@herlo	goozbach: ooh, the logo should be a black and white goose :)
+2011-04-22 14:56:06	@herlo	like a penguin
+2011-04-22 14:56:13	harleypig	what is goose?
+2011-04-22 14:56:28	harleypig	Are you making an open source project that virtually gooses people?
+2011-04-22 14:56:34	harleypig	I'd get behind that!
+2011-04-22 14:56:38	harleypig	And goose it ...
+2011-04-22 14:57:00	@herlo	goozbach: we will have to play on that for sure
+2011-04-22 14:57:06	@herlo	goozbach: make me an OWNER!!
+2011-04-22 14:58:00	goozbach	herlo: hold on! I'm registering .org .com
+2011-04-22 14:58:09	@herlo	hehe, okay
+2011-04-22 15:20:08	@herlo	goozbach: installing F15 beta now
+2011-04-22 15:20:22	@herlo	in a VM :)
+2011-04-22 15:29:11	goozbach	https://github.com/organizations/gooseproject
+2011-04-22 15:29:14	goozbach	buhahaha!
+2011-04-22 15:29:49	@herlo	w00t!
+2011-04-22 15:30:32	@herlo	goozbach: want that I fill in the org info?
+2011-04-22 15:30:50	goozbach	yeah
+2011-04-22 15:30:56	@herlo	kk, doing it now
+2011-04-22 15:30:58	goozbach	gotta go to our all-hands
+2011-04-22 15:31:02	goozbach	I'll add more to this later
+2011-04-22 15:31:05	@herlo	kk
+2011-04-22 15:37:05	Gate	goose linux? => http://goo.gl/8luv4
+2011-04-22 15:46:54	@herlo	Gate: the other day we were talking about how CentOS didn't have v6 out yet
+2011-04-22 15:46:59	@herlo	and we thought that was lame
+2011-04-22 15:47:11	@herlo	so it got discussed
+2011-04-22 15:47:13	@herlo	~logs
+2011-04-22 15:47:13	infobot	All conversations are logged to http://ibot.rikers.org/%23utos/ Lines starting with spaces are not logged. Logs are updated daily.
+2011-04-22 15:47:22	Gate	    puts request
+2011-04-22 15:47:32	Gate	gah, bloody paste
+2011-04-22 15:47:36	Gate	I wanted copy blast you!
+2011-04-22 15:48:29	Gate	hm. Well, good luck with that. :)
+2011-04-22 15:48:31	@herlo	http://ibot.rikers.org/%23utos/20110412.html.gz
+2011-04-22 15:48:34	@herlo	Gate: ^^
+2011-04-22 15:48:47	@herlo	Gate: you could help us
+2011-04-22 15:48:59	Gate	What do you need?
+2011-04-22 15:49:04		Gate is still reading
+2011-04-22 15:49:09	@herlo	everything
+2011-04-22 15:49:30	@herlo	Gate: it ends here http://ibot.rikers.org/%23utos/20110413.html.gz
+2011-04-22 15:50:40	@herlo	goozbach: http://sourceforge.net/projects/goose-search/<-- we could include this app :)
+2011-04-22 16:01:20	Gate	herlo: sorry, phasing in and out to do work. So you are looking for a centos replacement?
+2011-04-22 16:02:40	@herlo	Gate: no, we're building a community the right way to make a distrbased upon RHEL
+2011-04-22 16:02:56	@herlo	s/trba/tro ba/
+2011-04-22 16:02:56	infobot	herlo meant: Gate: no, we're building a community the right way to make a distro based upon RHEL
+2011-04-22 16:03:36	Gate	Well, I am not a RHEL/Fedora/CentOS fan as you know, but if I can help I'll be happy to.
+2011-04-22 16:04:08	@herlo	Gate: this is the *right* way https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community
+2011-04-22 16:04:24	@herlo	s/the/a/
+2011-04-22 16:04:25	infobot	herlo meant: Gate: this is a *right* way https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community
+2011-04-22 16:05:32	Gate	"Making important decisions in private is like spraying contributor repellant on your project." <-- I like
+2011-04-22 16:05:46	@herlo	yes!
+2011-04-22 16:06:52	@herlo	Gate: that's actually why I like Fedora so much, they truly believe in the open model, even if it comes with pain. I can't say that's true for quite a few other distros
+2011-04-22 16:07:18	@herlo	and OSes, even very popular ones.
+2011-04-22 16:09:19	Gate	So you know my skills, what do you have that could benefit from half a day a week of programming :)
+2011-04-22 16:10:53	@herlo	ooh, I'm sure there's something
+2011-04-22 16:10:58	@herlo	we need a website, probably
+2011-04-22 16:11:38	Gate	I can do that
+2011-04-22 16:11:59	Gate	My host is pithy but it should also be enough to host it during bootstrap
+2011-04-22 16:12:00	@herlo	w00t! the gooseguin! http://2.bp.blogspot.com/_r8tWGVHrjGI/SC4PC6tWxFI/AAAAAAAAEcg/rkK4VniAHXw/s200/Goose.png
+2011-04-22 16:12:21	@herlo	oh, well, I'm sure we can get you a linode or something useful like that
+2011-04-22 16:12:40	Gate	I am using an aws micro instance
+2011-04-22 16:13:05	Gate	I have had to shut down apache because (i think) it is configured to take too much space when idle
+2011-04-22 16:13:06	@herlo	I have one of those was well
+2011-04-22 16:13:13	@herlo	should actually be plenty for now
+2011-04-22 16:13:33	Gate	herlo: so... what does the website need to do...
+2011-04-22 16:13:34	@herlo	when goozbach returns, ask him where he plans to have the site?
+2011-04-22 16:13:41	@herlo	and what needs to be on it
+2011-04-22 16:13:41	@herlo	:)
+2011-04-22 16:13:52	Gate	goozbach: ping
+2011-04-22 16:13:59		herlo thinks it needs to be the front end to the community
+2011-04-22 16:14:31	@herlo	likely will needa simple explanation of what GoOSe Linux is and how it works
+2011-04-22 16:14:31	Gate	Unfortunately, I will probably just kick off a wordpress (and violate my promise to myself to not install mod-php)
+2011-04-22 16:14:51	@herlo	Gate: use nginx and fcgi, no mod-php :)
+2011-04-22 16:15:17	goozbach	Gate: pong
+2011-04-22 16:15:21	Gate	herlo: it would still be executing php, and my promise was more about avoiding wretched languages in my free time
+2011-04-22 16:15:32	goozbach	I'm just finishing setting up google apps for my domain
+2011-04-22 16:15:56	goozbach	outsource *EVERYTHING* but the core of building a distro
+2011-04-22 16:17:07	@herlo	goozbach: yep, so the site would just be a nice front end to point people in proper places, like mirrors
+2011-04-22 16:17:47	goozbach	yup
+2011-04-22 16:17:51	goozbach	simple static page
+2011-04-22 16:17:54	goozbach	not too fancy
+2011-04-22 16:18:06	@herlo	goozbach: well, what about SSO
+2011-04-22 16:18:28	@herlo	I mean, you can do openid, or something, no?
+2011-04-22 16:19:04	Gate	herlo: for what purpose? What would logged-in individuals be able to do?
+2011-04-22 16:19:10	@herlo	in my mind, we don't have to worry a ton about that stuffup front, but maybe Gate would be interestedto look into that...
+2011-04-22 16:19:32	@herlo	Gate: well, logins to Google mail, github, build boxes, etc.
+2011-04-22 16:20:07	@herlo	most of it is external to the project, but there will be a centralized point.  ATM, we're planning to use freeipa to manage the internal parts
+2011-04-22 16:20:26	goozbach	we can figure that out later I suppose
+2011-04-22 16:20:50	goozbach	add an attribute in freeipa which links your accounts for the external stuff 
+2011-04-22 16:20:50	@herlo	goozbach: yeah, just suggeting things for gate to look into if he's interested
+2011-04-22 16:20:56	goozbach	ahh yeah go ahead
+2011-04-22 16:21:31	@herlo	goozbach: that's a good idear for the external linking
+2011-04-22 16:21:36	@herlo	anyway
+2011-04-22 16:22:08	@herlo	goozbach: I noticed we have a gravatar option on github, so I was trying to come up with a gooseguin logo :)
+2011-04-22 16:22:17	@herlo	while I waited for F15 to install
+2011-04-22 16:22:35	@herlo	and fail finding freeipa after 10 minutes
+2011-04-22 16:22:37	@herlo	:)
+2011-04-22 16:24:25	@herlo	goozbach: if we make freeipa kvm instance, do you think we could just save it and restore it somewhere else?
+2011-04-22 16:26:31	@herlo	or would you prefer it be puppeted?
+2011-04-22 16:29:47	goozbach	idealy puppeted and kickstarted
+2011-04-22 16:29:57	goozbach	we need to start storing packages in an admin repo too
+2011-04-22 16:30:02	@herlo	kk, I was just thinking for the initial setup
+2011-04-22 16:30:14	@herlo	yeah, yeah cobbler!
+2011-04-22 16:37:47	@herlo	goozbach: freeipa isn't in the EPEL repos?
+2011-04-22 16:38:58	goozbach	it's not in epel yet
+2011-04-22 16:39:06	goozbach	it's in a dev repo for f15
+2011-04-22 16:39:12	goozbach	not in F15 proper yet
+2011-04-22 16:39:17	@herlo	well, it's in others too
+2011-04-22 16:39:18	goozbach	Don't remember the details
+2011-04-22 16:39:42	@herlo	yeah, seems like getting it into epel5/6 would be good
+2011-04-22 16:40:43	@herlo	goosemaster, nice!
+2011-04-22 16:42:29	goozbach	herlo: I worked towards getting it there but then it broke
+2011-04-22 16:42:40	goozbach	I am unsure of what would be needed
+2011-04-22 16:43:36	@herlo	kk
+2011-04-22 16:43:41	@herlo	we can work on it together :)
+2011-04-22 16:44:49	goozbach	well dns needs to propigate but gooseproject.org is a google site now
+2011-04-22 16:45:01	@herlo	goozbach: add mail.goosproject.org. 86400 IN CNAME ghs.google.com.
+2011-04-22 16:45:08	@herlo	to dns
+2011-04-22 16:45:13	@herlo	er gooseproject.org
+2011-04-22 16:45:36	goozbach	ahh
+2011-04-22 16:45:57	@herlo	then you can go to mail.gooseproject.org instead of google.com/a/gooseproject.org
+2011-04-22 16:49:41	goozbach	done
+2011-04-22 16:51:57	@herlo	w00t!
+2011-04-22 16:53:00	Gate	:/ I think I may have poorly written my ruby script. Its tryin to malloc 1.7 GB at a time.
+2011-04-22 16:53:12	@herlo	whee!
+2011-04-22 16:54:04	Gate	Stupid me, thinking that reading a file in and doing sha and md5 on the data in ram was a GOOD idea.
+2011-04-22 16:54:47	Gate	And then throwing it at backups to look for duplicate files
+2011-04-22 18:00:47	shalkie	Greets all.
+2011-04-22 18:01:12	shalkie	goozbach: regarding Goose, I want in.
+2011-04-22 18:04:33	shalkie	I also have an externally available IP (static) that I could set a VM or physical host up on.
+2011-04-23 11:15:36	@herlo	goozbach: ping
+2011-04-24 11:33:35	goozbach	herlo: pong
+2011-04-24 11:48:39	@herlo	goozbach: haha
+2011-04-24 11:48:49	@herlo	that was like yesterday morning :)
+2011-04-24 11:52:12	@herlo	goozbach: what do you get when you run
+2011-04-24 11:52:14	@herlo	dig txt gooselinux.org
+2011-04-24 12:09:51	goozbach	sfp and google verivfy
+2011-04-24 12:11:50	goozbach	;; ANSWER SECTION:
+2011-04-24 12:11:50	goozbach	gooselinux.org.         1800    IN      TXT     "google-site-verification=_azy2D5KJ528kioPBsD2FqmQLceuwAW5Ia-eK8Gn6YA"
+2011-04-24 12:11:50	goozbach	gooselinux.org.         1800    IN      TXT     "v=spf1 include:_spf.google.com ~all"
+2011-04-25 15:19:50	shalkie	goozbach: ping
+2011-04-25 15:19:56	goozbach	shalkie: pong
+2011-04-25 15:20:28	shalkie	goozbach: I would be interested in helping with goose.
+2011-04-25 15:20:43	shalkie	I also have a free external IP address.
+2011-04-25 15:20:53	goozbach	ok that's awesome!
+2011-04-25 15:21:01	goozbach	what would you like to work on?
+2011-04-25 15:21:20	goozbach	we're needing a simple static page put up on gooseproject.org (currently a google site)
+2011-04-25 15:21:23	shalkie	Where can I help?
+2011-04-25 15:21:36	goozbach	we need to finish a freeipa install (herlo is working on that)
+2011-04-25 15:21:38	shalkie	Sure, I can do that for you.
+2011-04-25 15:21:50	goozbach	let me make you a domain admin on the google domain
+2011-04-25 15:22:11	shalkie	Okay. I sent over my google id in a pm the other day. Don't know if you got it.
+2011-04-25 15:26:00	goozbach	what I was invisoning with the static site was:
+2011-04-25 15:26:12	goozbach	1: a link to my blog post under an "about" heading 
+2011-04-25 15:26:22	goozbach	2: link to the github org page
+2011-04-25 15:26:29	goozbach	3: link to the mailing list
+2011-04-25 15:26:30	fugue88	~ambush herlo
+2011-04-25 15:26:46	goozbach	4: history (cleaned logs of this channel from the discussion)
+2011-04-25 15:26:54	goozbach	5: assignments at the moment
+2011-04-25 15:27:03		goozbach domains stuff
+2011-04-25 15:27:06	goozbach	herlo freeipa
+2011-04-25 15:27:08	goozbach	you website
+2011-04-25 15:27:22	goozbach	tonight I'll write up another blogpost abt the packages thing
+2011-04-25 15:27:47	fugue88	~ambush herlo
+2011-04-25 15:28:08	goozbach	https://github.com/gooseproject
+2011-04-25 15:28:11	fugue88	~ambush herlo
+2011-04-25 15:28:11		infobot comes out of hiding and launches an attack against herlo
+2011-04-25 15:28:34	goozbach	https://groups.google.com/group/goose-linux
+2011-04-25 15:28:51	goozbach	http://blog.friocorte.com/2011/04/bootstrapping-a-rhel-clone.html
+2011-04-25 15:29:17	goozbach	ohh and 6: link to how to run a community -- https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community
+2011-04-25 16:26:30	@herlo	goozbach: hi
+2011-04-25 16:26:50		herlo thought he mentioned that he was busy today, but would be available the rest of the week to work on gooselinux :)
+2011-04-25 16:27:18	goozbach	didn't ping you, just mentioned you
+2011-04-25 16:27:21	goozbach	:)
+2011-04-25 16:27:44	goozbach	I've not done anything but give shalkie some access
+2011-04-25 16:28:27	shalkie	Yes. Some acess... bwwahahahahahahah...
+2011-04-25 16:28:36	shalkie	s/acess/access/
+2011-04-25 16:28:36	infobot	shalkie meant: Yes. Some access... bwwahahahahahahah...
+2011-04-25 16:28:51	shalkie	Thinking of which....
+2011-04-25 16:31:27	@herlo	goozbach: be careful what kind of access you give that guy :)
+2011-04-25 16:33:05	goozbach	butttt
+2011-04-25 16:33:14		goozbach checks his page
