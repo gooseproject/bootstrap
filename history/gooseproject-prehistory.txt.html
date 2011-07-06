@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>gooseproject-prehistory.txt</title>
+  <link rel="stylesheet" href="irclog.css" />
+  <meta name="generator" content="irclog2html.py 2.7 by Marius Gedminas" />
+  <meta name="version" content="2.7 - 2008-06-10" />
+</head>
+<body>
+<h1>gooseproject-prehistory.txt</h1>
+<table class="irclog">
+<tr><td class="other" colspan="3">2011-04-12 15:20:47shalkieAy yea... Dag wieers has put out the feelers for a community built RHEL spin. It has already been shooshed on the CentOS mailing list.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 15:34:24goozbachshalkie: linky?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 15:34:36goozbachI'd be interested in helping with that</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 15:34:42goozbachI respect the hell out of Dag</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 15:36:56@herloshalkie: really? I'd like to see that too</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 15:48:00goozbachfound it: <a href="http://lists.centos.org/pipermail/centos/2011-April/109827.html">http://lists.centos.org/pipermail/centos/2011-April/109827.html</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-12 15:49:26goozbachtweet in question: <a href="http://twitter.com/#!/dagwieers/status/57563280260087808">http://twitter.com/#!/dagwieers/status/57563280260087808</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:01:54shalkieSorry Goozbach, I should have sent that.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:02:10shalkieherlo: Yeah. I have already voluntered, but am a bit cash strapped.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:02:25@herloit requires money??</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:02:46shalkieNot that I know, but his question was about getting funds:</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:03:01@herlooh, haven't had time to read up</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:03:13shalkie" Anyone willing to fund a RHEL rebuild project with timely releases, transparent processes and fosters community involvement ?"</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:03:38goozbachsomeone who has a spare license should spin up a RHEL box, download all the SRPMS, setup koji and go to town</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:03:53goozbachI think the centos community is getting burnt out</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:04:16goozbachtheir current infrastructure isn't allowing them to move at the speed that their "customers" expect</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:04:37@herlogoozbach: I think I could fulfill your first statement</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:04:45goozbachs/infrastructure/infrastructure, policies, and core team/</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:04:46infobotgoozbach meant: their current infrastructure, policies, and core team isn't allowing them to move at the speed that their "customers" expect</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:08goozbachI wonder how much a EC2 instance which could run koji to do this would cost per month</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:20@herlogoozbach: I think you'd need a few doezen boxes for building, mailing list, etc...</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:32@herlowell, at least a dozen</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:36fozzmooGoozbachOS</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:41shalkieTo make matters worse, they hold the community at arms length. There was a thread not to long ago where Dag brought up the fact that there could be more community involvement in the build process and more transparent processes. He got roughly rebuked.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:48fozzmooGoOS.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:51@herlolol</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:55@herloGoozOS</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:06:59herlo likes that</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:07:15fozzmooYeah, that'll win the suits over.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:07:18shalkieGoOSe? The dev project could be called Maverick?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:07:45goozbachI like GoOSe</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:07:54@herlolol</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:07:58goozbachshalkie: the first release would be maverick</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:08:12goozbachherlo: how a dozen?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:08:17goozbachcode on github</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:08:25goozbachmailing list on google groups</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:08:54@herlobuilding different arches, deployment, mirroring, etc</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:08:59goozbachone RHEL box with a subscription to get notified of updates and download the SRPM using yum</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:09:11@herlomaybe</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:09:20goozbachone box running koji</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:09:35goozbachone webhost with rsync/ftp/http</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:09:36@herlobodhi</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:09:38goozbachboom done</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:09:41fozzmooMaybe CentOS only has one box and they've been rpmbuild-ing packages since RHEL6 came out. :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:09:58goozbachbodhi?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:10:00@herlomirrors</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:10:25shalkieApparently they have a number of boxes, but they aren't actually owned by the project. I guess they are volunteered from various companies and people.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:10:31@herlogoozbach: it's the service that lets one download and test packages, give karma, etc</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:10:36goozbachahh</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:10:41shalkieI have thing2 sitting here. And I am looking at getting an old 1U server from the U.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:10:45goozbachis it resource intensive?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:11:19goozbachsupermicro has a new four-way box (four servers in 2RMU) redundant power shared among the four.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:11:34goozbachif we could get one of those hosted somewhere we'd be in a good spot</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:11:35fozzmoo drools</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:11:52shalkieNice. My budget is around the $40 the old server costs. :-)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:11:57goozbachto have GoOSe hosted</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:12:18shalkieWhat about a linode system?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:13:01goozbachcouldn't bodhi and koji and the web host be all on the same box?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:13:05shalkieDon't think it would have the build power of an EC2 system, but certainly have some.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:14:53fozzmooMy brother in law says GoOSe reminds him too much of "goatse"</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:15:32fozzmooJust call it utosOS. :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:16:32goozbachOSUTOS</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:16:46fozzmooOr backwards: SOTUSO</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:17:07goozbachOSoUTOS</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:17:20goozbachoperatingsystem of utahopensource</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:25:32@herlonice</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:26:50Jayce^ can't wait for the first flamewar when some package isn't included...</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:27:01Jayce^*somebody* will claim it's church direction :-D</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:28:35goozbachbhahaha</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:28:55goozbachI did some calculations</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:29:01goozbachwe could bootstrap with 4 servers</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:29:30@herlogoozbach: I could see that</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:29:41goozbach1) bastion host: runs puppetmaster, freeIPA; acts as account management server</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:29:46@herloI'm fairly interested in helping with that</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:29:47shalkieI have some servers hanging around.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:29:48goozbach2) buildsys</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:29:57goozbachruns koji and bodhi</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:30:04goozbachuses kerb from bastion host</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:30:11@herloyou'd probably need a second buildsystem</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:30:22@herlodepending on how heavy things got, but maybe not at first</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:30:44@herloseeing as koji can pass off building to other services, we could bootstrap to one of the other machines</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:30:52@herlos/services/systems/</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:30:53infobotherlo meant: seeing as koji can pass off building to other systems, we could bootstrap to one of the other machines</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:31:01goozbach3) downloads.$PROJ: hosts public httpd downloads, rsync downloads, ftp downloads, and public main www for project</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:31:26goozbach3) private host:  acts as RSYNC master for all approved top-level mirrors</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:31:35goozbach4) private host:  acts as RSYNC master for all approved top-level mirrors</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:31:35@herlos/3/4/</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:31:39@herlo:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:00goozbachget xmission and a few other places which we have connections to be our first miirors</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:00@herlowhat kind of disk space will we need?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:06goozbachxmission UofU, BYU</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:09@herlosure sure, not a biggie</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:09goozbachGT </td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:11goozbachUGA</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:23goozbachherlo: that's the sticky one</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:38goozbachkoji/bodhi would eat a great deal</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:32:42@herloindeed, I'm guessing in the 2-4TB range</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:02@herlowhich isn't horrible</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:03fozzmooI was just talking to a mutual friend of ours... about hosting a 2U (4 node) machine.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:19goozbachall the other stuff</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:28goozbachbugtracker/source code</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:30goozbachgithub</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:34goozbachmailing list google groups</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:39goozbachand POW!</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:33:40goozbachdone</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:34:01@herlohmm</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:34:03goozbachyou have a completely transparent, easily extensible distro</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:34:34goozbachonly server not directly accessable is the bastion host/puppet server</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:34:43goozbachie HTTP/FTP/ETC</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:36:17goozbachand we'd have a channel here on freenode</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:38:51fozzmooNever mind. Still in the out of the way corner.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:45:54fozzmoo<a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16816101329">http://www.newegg.com/Product/Product.aspx?Item=N82E16816101329</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-12 16:45:56fozzmooOnly $3k</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:05:40shalkieHmmm... #goose is taken it appears.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:09:26goozbachfozzmoo: is it 3k for barebones or ready to use?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:09:31goozbachwould we have to supply disks?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:09:41fozzmoobarebones.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:09:47fozzmooNo CPUs, No RAM, no disks.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:10:15goozbachoohh</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:10:23goozbachthat's gonna add to the cost</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:10:43fozzmooYeah. Apparently whipping up a CentOS competitor is not cheap.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:11:10fozzmooI'd ballpark the hardware to be around $8-10k</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:13:59goozbach<a href="http://www.siliconmechanics.com/i27502/Opteron-2U-4-Node.php">http://www.siliconmechanics.com/i27502/Opteron-2U-4-Node.php</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:14:06goozbachthat's a supermicro integrator</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:14:17goozbachand the server we have sitting on our bar right now</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:16:27fozzmooOnly 8 core CPUs? ;-)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:16:49goozbach$7475</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:16:51goozbach<a href="http://www.siliconmechanics.com/quotes/201605?confirmation=127156574">http://www.siliconmechanics.com/quotes/201605?confirmation=127156574</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:16:58goozbachthats minimim price</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:17:02fozzmooHmmm. Replacing them with 12-core CPUs would only add $4400 or so to the cost. :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:17:03goozbachone CPU per node</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:17:18goozbachwho's in?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:17:50fozzmoo$7475... that's $3737 between the two of us, goozbach.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:19:09goozbach16TB should be enough storage to start, no?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:19:37goozbachwell 12 and parity</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:20:01fozzmooThat's what Bill Gates said.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:20:04fozzmooOr something like htat.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:35:04goozbachoh yes</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:35:17goozbachthat also includes a subscription to RHEL6 for one of the nodes</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:35:19goozbach:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:36:48goozbachwho else wants to pony up some monies?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:36:57goozbachspread thin enough it becomes doable</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:37:49goozbachI do like GooZe Linux</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:37:59goozbachor GoOSe Linux</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:42:32fozzmooYo don't like SOTUSO? :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:43:26goozbachGoOSe Linux rolls off the tounge easier</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:44:37goozbachheck before we buy this, who has servers sitting doing nothing?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:44:41goozbachlet's try to build it</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:45:01fugue88I've got an Atom processor sitting mostly idle...</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:48:41shalkieI have some spare hardware. All older stuff though. I have a couple older Suns (Including a cobalt qube3), an older pentium system and I am going to go snag a system from the U for various reasons. ;-)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:49:02shalkieAnd that doesn't involve the two packard bell pentium systems. :-D</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:50:10shalkieOh and a laptop or two hanging around that are going idle as well. Oh and the HP PA Risc system.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:50:51shalkieI know I have some more hardware, but all older...</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:52:24fugue88Sounds like we've got ourselves a cloud!</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:52:38fugue88goozbach: Let's get started, already.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 17:52:55fugue88;)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:49:00shalkieDag responded through twitter (and the CentOS mailing list). Apparently he isn't starting his own spin. :-( Though his comment to me was that there seemed to be plenty of interest.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:49:08shalkieI like the idea of doing goose though.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:57:27@herloshalkie: what does goose stand dor?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:57:28@herlofor</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:58:45shalkieIt was a play off of GoozOS.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:58:58@herloright, but it should stand for something</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:59:13@herlolike 'Good Old Operating System Environment'</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 19:59:41@herlo'Goozbach's Ornate OS Extraordinaire'</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:01:49shalkieheh. Not bad. I could see that. I like the use of extraordinarily ornate name. :-)</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:02:13@herlolol</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:02:14goozbachgrand orderly operating system environment</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:02:45goozbachi think the last three words are a good lock</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:03:05@herloGrand Old OS Exchange</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:12:24shalkieEh. Not sold on the Exchange part.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:12:38shalkieRegardless of the name, I like the idea.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:14:18@herloit was a goofy name, just mucking around</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:15:28@herloGeneric Oriented OS Environment</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:18:27shalkieGandardized Open Operating System Edition?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:19:15shalkie'Cause whats good for the goose is good for the gander..</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:19:25shalkies/Gandar/Gander/</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:19:50@herloGet Our Outrageously Sweet Ecosystem</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:25:41@herloGo On Open Said Envelope</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:32:43goozbachisn't this what kickstarter is for?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:33:28goozbachG could be for generic</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:33:45goozbachGenric &lt;SOMETHING&gt; Operating System Environment</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:34:04goozbachGeneric Open Operating System Environment</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:36:09goozbachWe could have a quacking like sound for startup</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:36:15goozbachand a Goose as a mascot</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:37:45NafaiHave you been "GOOSEd"?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:39:03goozbachnice!</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:39:17goozbachthat's a good bumper sticker / Tshirt idea</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:41:03shalkieI like it.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:46:40Nafaiheh</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 20:53:08goozbachI'm mirroring the SRPMS to my laptop to see how big one of the releases is</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:05:12goozbachI bet if we started building packages Wiers would jump in</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:07:04@herlogoozbach: let's get some machines</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:07:14@herloI'll be happy to help</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:08:42shalkieI say we see if herlo is interested in hosting. He has a nice Utopia connection.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:09:10goozbachdoes anyone have a private github account we could use?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:09:14shalkieYeah. They are a nice little place. Do a live band fairly often. Litterally a nieghborhood pub.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:09:19goozbachI've got a couple of scripts written now</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:09:31goozbachdon't want to tip our hand too soon</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:09:32shalkie nudges herlo for some rack space.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:10:43@herloshalkie: I have *no* *such* *thing*</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:11:05@herlogoozbach: how much do they cost?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:11:06shalkieHerlo: You don't have a Utopia connection?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:11:36shalkie blinks innocently</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:14:00@herlono, never have</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:14:00goozbachredhat may be bw limiting</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:14:36@herlogoozbach: you mean for you downloading the packages?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:15:14goozbachnevermind</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:15:18goozbachnetworkhickup</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:15:23goozbachdownloading client now</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:15:29goozbacher the Client packages</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:16:22@herlogoozbach: are you downloading src.rpms? or what?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:17:51goozbachherlo: yeah</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:17:57goozbachto my laptop</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:18:03goozbachto see how much space they take</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:18:08@herloright-o</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:18:18herlo wishes he had decent bandwidth to help the cause</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:18:34@herlocrappy hotel wifi</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:18:41goozbachherlo: you familar with freeipa?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:18:44goozbachwe need that first</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:19:52@herlogoozbach: a little</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:19:58@herloI've setup 389ds</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:20:06@herlobut not the kerberos or other parts</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:20:27@herloI don't currently have time to set it up though</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:20:34goozbachwe need kerb for koji </td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:20:36@herloI will probably have time next week</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:20:49goozbachsomeone needs to learn how to set that up</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:21:01@herloyeah, I've seen and mucked with koji</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:21:09@herlobut it was already setup</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:23:53goozbachwell gotta go put the baby down</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:23:56goozbachor dishes</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:24:02goozbachwhichever the wifey doesn't want</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:24:31goozbachyour homework is to think about rewards which could be used for kickstarter type funding</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:27:03@herloindeed</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:33:04shalkieherlo: I am sorry. I thought you had Utopia at home.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:33:19shalkieHopefully they will finish the freakin' murray build out.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:33:25@herloshalkie: it doesn't mattter</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:33:30@herlos/ttt/tt/</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:33:31infobotherlo meant: shalkie: it doesn't matter</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:33:55@herlobecause even if they finish out the buildout, Utopia won't put it into Applegate without 100% acceptance</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:34:05shalkieThat sucks.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:34:50@herlothat's 300+ people which can *never* agree, would have to allow themselves to be charged $150 or so to put internet into their house, which they technically already have via comcast for qworst</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:35:04@herloeven if it's better, they won't want it because it costs money</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:35:13herlo thinks people in HOAs are dumb</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 21:35:20@herloincluding himself</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:02:17harleypigcan anyone tell me what nepomukserver is and why I wo uld want it running on my system?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:02:31harleypigwtf? Social Semantic Desktop?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:02:33harleypigwtf is that?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:07:13harleypigdoing a 'sudo aptitude purge libnepomuk4 libnepomukquery4a' wants to delete most of my kde installation ....</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:23:53shalkieHerlo: I have been seeing a beer and bash or something along those lines reoccuring in the Portland area. Think hacknights at pub.</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:24:14@herloshalkie: along what lines?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:28:01fugue88herlo: What if half the people at Applegate want it, and are willing to pay $300 each?</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:29:14@herlonope</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:29:22@herloit was an all or nothing thing</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:29:32@herlosome stipulation from Utopia, actually</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:29:49@herlobtw, I think it was more like 80% had to commit and everyone would have to pay</td></tr>
+<tr><td class="other" colspan="3">2011-04-12 22:31:04shalkieherlo: I think they called it Beer and Bash. I have been looking but haven't found one of the references. Beer and Coding. Sounds like a winner to me. :-)</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:02:22goozbachSubmitted for comment(this is a draft, don't publish elsewhere please): <a href="http://blog.friocorte.com/2011/04/bb9b253795c5b770bba1707f9dca030a3161662f.html?235954">http://blog.friocorte.com/2011/04/bb9b253795c5b770bba1707f9dca030a3161662f.html?235954</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:02:44goozbachlet me know if I need to add/subtract anything and I'll publish it sometime tomrrow</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:03:06herlo looks</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:06:44goozbachbear in mind I'm really tired too</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:06:46goozbach:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:07:26@herlogoozbach: why is openclue there?</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:07:39@herloas a category, is that just how you get it on the utos planet?</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:08:00herlo will definitely have to sleep on the proposal, but I like where it's going</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:08:54fozzmoo:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:19:58goozbachherlo: no idea why it's there.</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:20:17goozbachI did have a per-category feed going to openclue</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:20:20@herlomaybe it's a default category?</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:20:32goozbachyeah</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:21:57@herlokk, no worries, just thought you'd like to know</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:22:15goozbach3.6G of SRPMS and growing</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:22:26goozbachlooks to be 800 or so of them</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:24:13@herlofun</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:24:42@herlogoozbach: so, I guess you'd have to consider the Arches you'd support.  I'm thinking x86/x86_64 ootb, and maybe more as we grow</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 00:25:01@herloPPC would probably be nice for some, ia64 for others</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:00:41goozbachone plaform done</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:00:48goozbach7.3 G of files</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:00:55goozbachI'm guessing there's a lot of overlap</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:42:35shalkieThat is a lot of number crunching that would need to be done.</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:45:10goozbachstarted download of all the different spins</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:45:14goozbachI'm sure there's overlap</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:45:18goozbachI'm gonna figure how much</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 11:54:41shalkieI tested out an o'reilly book on one recently and even the sample doesn't let you zoom into the diagrams. :-(</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:38:31goozbachany further comments on my blog draft?</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:38:37goozbachSubmitted for comment(this is a draft, don't publish elsewhere please): <a href="http://blog.friocorte.com/2011/04/bb9b253795c5b770bba1707f9dca030a3161662f.html?235954">http://blog.friocorte.com/2011/04/bb9b253795c5b770bba1707f9dca030a3161662f.html?235954</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:39:05@herlogoozbach: I think it's good. I'll need to read it later on, but I can do that when it's published :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:42:59shalkieGoozbach: I like it. I do see some grammer and spelling issues.</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:43:47shalkieI am blaming them on the lack of sleep factor. ;-)</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:47:37fugue88grammar  :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:47:37shalkieSee how easy it is to screw up? :-)</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:47:37fugue88heh</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:50:14goozbachshalkie: little help then?</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:55:43shalkiegoozbach: Sure. Under the heading "A good model" you have "A good example of how to run a distro is the Fedora." Should probably just be "is Fedora."  Same heading: "Yes the Fedora project does..." I would probably put "Yes, the Fedora project does".  Though that might just be me.  No period on the first line under Bootstrapping. Under the header of Build system automate-able should be automatable.</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 12:55:51shalkieBack to teaching. Sorry.</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 13:28:45goozbachBlog post up: @dagwieers Some friends and I did some thinking on this very topic.</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 13:28:48goozbach<a href="http://bit.ly/gWvUi5">http://bit.ly/gWvUi5</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-13 13:28:50goozbachdoh</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 13:29:06goozbachthere's my tweet *AND* blog post</td></tr>
+<tr><td class="other" colspan="3">2011-04-13 13:29:07goozbach:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:53:58shalkieGoozbach: So what was the cross over on those packages?</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:54:20goozbach22 g</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:54:23goozbachtotal</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:54:42goozbachI can't get into my laptop at the moment (tis at home, and I guess my dhcp lease changed and DDNS didn't update)</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:55:08goozbachand I didn't have it on a filesystem which supported hardlinks so I couldn't easily calculate the cross over</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:55:13goozbachbut I will tonight or tomorrow</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:55:14shalkieWow. I didn't think it would be that big.</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:55:32goozbachthere *HAS* to be lots of cross over</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:55:40shalkieYou would think so.</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:58:55@herloyou two!!</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 17:58:57@herlo:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:08:06shalkieGoozbach: Was it RHEL6 src?</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:08:14goozbachshalkie: yeah</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:08:25goozbachused wget --mirror against ftp.rh</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:08:53goozbach 6client, 6workstation, 6computenode, and 6server</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:10:30shalkieYaboot? Interesting.</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:10:40goozbachyaboot?</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:10:42shalkieIsn't Yaboot ppc?</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:11:17shalkieHuh. It is. It was in the srpms directory for 6Server.</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:11:33shalkieIt is the PPC boot loader.</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:12:07goozbachyeah</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:12:20goozbachwouldn't be suprised if ppc isn't supported</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:12:30@herloshalkie: ppc is supported in Fedora now iirc</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:12:37goozbachas there's IBM servers built with it</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:12:38@herloagain</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:12:55shalkiehaha. That would be great "We are including the PPC boat loader, but we won't support that platform."</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:13:09@herloindeed :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:13:22shalkieMight indicate future support though. I know that apple was talking about switching back to PPC if I remember correctly.</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:13:46goozbachback to ppc?</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:13:47shalkieThough sometimes I collect and misorganize random things.</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:13:50goozbachgroahin</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:14:59shalkiegroahin?</td></tr>
+<tr><td class="other" colspan="3">2011-04-14 18:16:25goozbachit's a laboured groan</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 11:34:25goozbachfinally got a number RE the SRPMS</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 11:34:39goozbachdoing hardlink against the tree would save: 16222306304(bytes?)</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 11:41:11@herlonice</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:21goozbachhere's the bottom line:</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:25goozbach[root@ord-mandell 6]$ du -sh backup/</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:25goozbach23G     backup/</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:25goozbach[root@ord-mandell 6]$ du -sh ftp.redhat.com/</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:26goozbach7.3G    ftp.redhat.com/</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:45goozbachbackup has the sources as copied from ftp.rh</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:55goozbachftp.redhat has the hardlinked tree</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:02:58goozbachNICE!</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:03:25fozzmoo~congratulate goozbach</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:03:55fozzmoo~congratulate_dammit goozbach</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:13:48pashdown checks last item off bucket list</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 12:56:04@undertakingyouping herlo</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 14:31:23goozbachRE GoOSe: <a href="https://www.theopensourceway.org/wiki/Organizing_a_community_-_checklist">https://www.theopensourceway.org/wiki/Organizing_a_community_-_checklist</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-18 14:31:40goozbachand: <a href="http://iquaid.org/2011/04/18/a-checklist-for-organizing-a-community/">http://iquaid.org/2011/04/18/a-checklist-for-organizing-a-community/</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-18 14:55:33@herlogoozbach: I &lt;3 quaid</td></tr>
+<tr><td class="other" colspan="3">2011-04-18 15:02:12@herlogoozbach: I think I've read both of those articles multiple times. I'll review them again this week</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:23:38@herlogoozbach: your message made it to my email</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:31:57@herlogoozbach: so, for GOOSe, I'm on board</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:32:17@herloI think we can get GOOSe 6 out before CentOS 6 comes out :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:32:24goozbachprobabally</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:32:28goozbachherlo: let's do it!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:32:30goozbachYAYA!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:32:48goozbachI was reading this and got excited</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:32:50goozbach<a href="https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community">https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:33:06@herlogoozbach: I am getting Marred in 3 weeks, so I will be unavailable from the 13-21, but I think we can get more of it done...</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:33:12@herlogoozbach: yes, I've read those, quaid rules!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:34:51@herlogoozbach: I'm sure we can worry more about the community itself as we build, no?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:35:03@herloI mean, sure. We do need people :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:35:25goozbachyeah</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:35:33@herlogoozbach: I can set up satellite server now :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:35:34goozbachwe need a freeipa host</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:35:40goozbachfirst</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:35:54@herlowe could set up spacewalk and start building there!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:36:03herlo notes that spacewalk uses cobbler!!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:36:19@herlogoozbach: why do we need a freeipa host?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:36:29goozbachfor koji to run</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:36:34@herlocouldn't we just use a windows Active Directory?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:36:38goozbachkoji needs a kerb domaain</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:36:39herlo chuckles</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:36:42goozbachhah!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:37:37@herlogoozbach: so where are we going to put this freeipa instance</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:38:48goozbachthat is the question</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:39:07goozbachI've been trying to build it on a virt guest rhel6 runing on my laptop</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:39:18goozbachbut that isn't accessable</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:39:21@herlowow</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:39:31@herloyeah, that'd suck</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:39:38goozbachI got it installed (rpm wise) but it doesn't work</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:39:44@herloI guess that's the firest thing, hosting</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:39:54goozbachI'm thinking it'd be easier to use F15 beta for the freeipa install</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:40:01@herlomaybe</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:40:17@herlobut we do need our infra to be semi-stable at some point, I suppose</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:41:12goozbachyeah, but we'd be doing everything with scripts and kickstarts for anyone to take and build our infrastructure anywhere</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:41:38@herloagreed</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:41:42@herlothat's not the issue</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:41:43goozbachwhich means, that apart from backing up the database, we can have a new instance built very rapidly</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:41:55@herloyeah, it's all about having a place to put that stuff</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:42:26@herlopart of my impetus for this is to get to building infrastructure management tools that make tracking and using systems easier, overally</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:42:32@herlos/lly/ll/</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:42:33infobotherlo meant: part of my impetus for this is to get to building infrastructure management tools that make tracking and using systems easier, overall</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:43:32@herlogoozbach: so let's figure out where to put it but I think I can probably get F15 beta installed and try to configure freeipa on my vm</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:43:43@herloit already has F15 beta</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:44:02goozbachherlo: let's start a github org</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:44:20@herlokk</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:44:23@herlosounds good</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:44:41goozbachI'll start it</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:44:44@herlodid you want the repo to be private at first?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:45:05herlo will fund that if needed for a bit</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:45:18goozbachherlo: nah</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:45:22goozbachopen from the start</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:45:37@herlokk, I just recalled someone mentioning that is all</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:45:54@herlomight have been a different conversation</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:49:19@herlogoozbach: I'm 'herlo' on there</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:49:51goozbachwho wants in other than herlo?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:50:03@herlogoozbach: shalkie might</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:50:30goozbach /msg me your google accounts</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:53:31@herlogoozbach: we should register gooseproject.org or something</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:53:59goozbach<a href="http://groups.google.com/group/goose-linux">http://groups.google.com/group/goose-linux</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:55:31@herlow00t!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:55:57@herlogoozbach: ooh, the logo should be a black and white goose :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:56:06@herlolike a penguin</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:56:13harleypigwhat is goose?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:56:28harleypigAre you making an open source project that virtually gooses people?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:56:34harleypigI'd get behind that!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:56:38harleypigAnd goose it ...</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:57:00@herlogoozbach: we will have to play on that for sure</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:57:06@herlogoozbach: make me an OWNER!!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:58:00goozbachherlo: hold on! I'm registering .org .com</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 14:58:09@herlohehe, okay</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:20:08@herlogoozbach: installing F15 beta now</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:20:22@herloin a VM :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:29:11goozbach<a href="https://github.com/organizations/gooseproject">https://github.com/organizations/gooseproject</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:29:14goozbachbuhahaha!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:29:49@herlow00t!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:30:32@herlogoozbach: want that I fill in the org info?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:30:50goozbachyeah</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:30:56@herlokk, doing it now</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:30:58goozbachgotta go to our all-hands</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:31:02goozbachI'll add more to this later</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:31:05@herlokk</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:37:05Gategoose linux? =&gt; <a href="http://goo.gl/8luv4">http://goo.gl/8luv4</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:46:54@herloGate: the other day we were talking about how CentOS didn't have v6 out yet</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:46:59@herloand we thought that was lame</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:47:11@herloso it got discussed</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:47:13@herlo~logs</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:47:13infobotAll conversations are logged to <a href="http://ibot.rikers.org/%23utos/">http://ibot.rikers.org/%23utos/</a> Lines starting with spaces are not logged. Logs are updated daily.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:47:22Gate    puts request</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:47:32Gategah, bloody paste</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:47:36GateI wanted copy blast you!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:48:29Gatehm. Well, good luck with that. :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:48:31@herlo<a href="http://ibot.rikers.org/%23utos/20110412.html.gz">http://ibot.rikers.org/%23utos/20110412.html.gz</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:48:34@herloGate: ^^</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:48:47@herloGate: you could help us</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:48:59GateWhat do you need?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:49:04Gate is still reading</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:49:09@herloeverything</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:49:30@herloGate: it ends here <a href="http://ibot.rikers.org/%23utos/20110413.html.gz">http://ibot.rikers.org/%23utos/20110413.html.gz</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 15:50:40@herlogoozbach: <a href="http://sourceforge.net/projects/goose-search/&lt;--">http://sourceforge.net/projects/goose-search/&lt;--</a> we could include this app :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:01:20Gateherlo: sorry, phasing in and out to do work. So you are looking for a centos replacement?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:02:40@herloGate: no, we're building a community the right way to make a distrbased upon RHEL</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:02:56@herlos/trba/tro ba/</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:02:56infobotherlo meant: Gate: no, we're building a community the right way to make a distro based upon RHEL</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:03:36GateWell, I am not a RHEL/Fedora/CentOS fan as you know, but if I can help I'll be happy to.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:04:08@herloGate: this is the *right* way <a href="https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community">https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:04:24@herlos/the/a/</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:04:25infobotherlo meant: Gate: this is a *right* way <a href="https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community">https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:05:32Gate"Making important decisions in private is like spraying contributor repellant on your project." &lt;-- I like</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:05:46@herloyes!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:06:52@herloGate: that's actually why I like Fedora so much, they truly believe in the open model, even if it comes with pain. I can't say that's true for quite a few other distros</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:07:18@herloand OSes, even very popular ones.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:09:19GateSo you know my skills, what do you have that could benefit from half a day a week of programming :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:10:53@herloooh, I'm sure there's something</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:10:58@herlowe need a website, probably</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:11:38GateI can do that</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:11:59GateMy host is pithy but it should also be enough to host it during bootstrap</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:12:00@herlow00t! the gooseguin! <a href="http://2.bp.blogspot.com/_r8tWGVHrjGI/SC4PC6tWxFI/AAAAAAAAEcg/rkK4VniAHXw/s200/Goose.png">http://2.bp.blogspot.com/_r8tWGVHrjGI/SC4PC6tWxFI/AAAAAAAAEcg/rkK4VniAHXw/s200/Goose.png</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:12:21@herlooh, well, I'm sure we can get you a linode or something useful like that</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:12:40GateI am using an aws micro instance</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:05GateI have had to shut down apache because (i think) it is configured to take too much space when idle</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:06@herloI have one of those was well</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:13@herloshould actually be plenty for now</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:33Gateherlo: so... what does the website need to do...</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:34@herlowhen goozbach returns, ask him where he plans to have the site?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:41@herloand what needs to be on it</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:41@herlo:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:52Gategoozbach: ping</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:13:59herlo thinks it needs to be the front end to the community</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:14:31@herlolikely will needa simple explanation of what GoOSe Linux is and how it works</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:14:31GateUnfortunately, I will probably just kick off a wordpress (and violate my promise to myself to not install mod-php)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:14:51@herloGate: use nginx and fcgi, no mod-php :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:15:17goozbachGate: pong</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:15:21Gateherlo: it would still be executing php, and my promise was more about avoiding wretched languages in my free time</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:15:32goozbachI'm just finishing setting up google apps for my domain</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:15:56goozbachoutsource *EVERYTHING* but the core of building a distro</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:17:07@herlogoozbach: yep, so the site would just be a nice front end to point people in proper places, like mirrors</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:17:47goozbachyup</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:17:51goozbachsimple static page</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:17:54goozbachnot too fancy</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:18:06@herlogoozbach: well, what about SSO</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:18:28@herloI mean, you can do openid, or something, no?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:19:04Gateherlo: for what purpose? What would logged-in individuals be able to do?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:19:10@herloin my mind, we don't have to worry a ton about that stuffup front, but maybe Gate would be interestedto look into that...</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:19:32@herloGate: well, logins to Google mail, github, build boxes, etc.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:20:07@herlomost of it is external to the project, but there will be a centralized point.  ATM, we're planning to use freeipa to manage the internal parts</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:20:26goozbachwe can figure that out later I suppose</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:20:50goozbachadd an attribute in freeipa which links your accounts for the external stuff </td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:20:50@herlogoozbach: yeah, just suggeting things for gate to look into if he's interested</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:20:56goozbachahh yeah go ahead</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:21:31@herlogoozbach: that's a good idear for the external linking</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:21:36@herloanyway</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:22:08@herlogoozbach: I noticed we have a gravatar option on github, so I was trying to come up with a gooseguin logo :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:22:17@herlowhile I waited for F15 to install</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:22:35@herloand fail finding freeipa after 10 minutes</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:22:37@herlo:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:24:25@herlogoozbach: if we make freeipa kvm instance, do you think we could just save it and restore it somewhere else?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:26:31@herloor would you prefer it be puppeted?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:29:47goozbachidealy puppeted and kickstarted</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:29:57goozbachwe need to start storing packages in an admin repo too</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:30:02@herlokk, I was just thinking for the initial setup</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:30:14@herloyeah, yeah cobbler!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:37:47@herlogoozbach: freeipa isn't in the EPEL repos?</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:38:58goozbachit's not in epel yet</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:39:06goozbachit's in a dev repo for f15</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:39:12goozbachnot in F15 proper yet</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:39:17@herlowell, it's in others too</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:39:18goozbachDon't remember the details</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:39:42@herloyeah, seems like getting it into epel5/6 would be good</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:40:43@herlogoosemaster, nice!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:42:29goozbachherlo: I worked towards getting it there but then it broke</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:42:40goozbachI am unsure of what would be needed</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:43:36@herlokk</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:43:41@herlowe can work on it together :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:44:49goozbachwell dns needs to propigate but gooseproject.org is a google site now</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:45:01@herlogoozbach: add mail.goosproject.org. 86400 IN CNAME ghs.google.com.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:45:08@herloto dns</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:45:13@herloer gooseproject.org</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:45:36goozbachahh</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:45:57@herlothen you can go to mail.gooseproject.org instead of google.com/a/gooseproject.org</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:49:41goozbachdone</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:51:57@herlow00t!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:53:00Gate:/ I think I may have poorly written my ruby script. Its tryin to malloc 1.7 GB at a time.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:53:12@herlowhee!</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:54:04GateStupid me, thinking that reading a file in and doing sha and md5 on the data in ram was a GOOD idea.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 16:54:47GateAnd then throwing it at backups to look for duplicate files</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 18:00:47shalkieGreets all.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 18:01:12shalkiegoozbach: regarding Goose, I want in.</td></tr>
+<tr><td class="other" colspan="3">2011-04-22 18:04:33shalkieI also have an externally available IP (static) that I could set a VM or physical host up on.</td></tr>
+<tr><td class="other" colspan="3">2011-04-23 11:15:36@herlogoozbach: ping</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 11:33:35goozbachherlo: pong</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 11:48:39@herlogoozbach: haha</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 11:48:49@herlothat was like yesterday morning :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 11:52:12@herlogoozbach: what do you get when you run</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 11:52:14@herlodig txt gooselinux.org</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 12:09:51goozbachsfp and google verivfy</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 12:11:50goozbach;; ANSWER SECTION:</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 12:11:50goozbachgooselinux.org.         1800    IN      TXT     "google-site-verification=_azy2D5KJ528kioPBsD2FqmQLceuwAW5Ia-eK8Gn6YA"</td></tr>
+<tr><td class="other" colspan="3">2011-04-24 12:11:50goozbachgooselinux.org.         1800    IN      TXT     "v=spf1 include:_spf.google.com ~all"</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:19:50shalkiegoozbach: ping</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:19:56goozbachshalkie: pong</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:20:28shalkiegoozbach: I would be interested in helping with goose.</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:20:43shalkieI also have a free external IP address.</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:20:53goozbachok that's awesome!</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:21:01goozbachwhat would you like to work on?</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:21:20goozbachwe're needing a simple static page put up on gooseproject.org (currently a google site)</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:21:23shalkieWhere can I help?</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:21:36goozbachwe need to finish a freeipa install (herlo is working on that)</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:21:38shalkieSure, I can do that for you.</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:21:50goozbachlet me make you a domain admin on the google domain</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:22:11shalkieOkay. I sent over my google id in a pm the other day. Don't know if you got it.</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:26:00goozbachwhat I was invisoning with the static site was:</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:26:12goozbach1: a link to my blog post under an "about" heading </td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:26:22goozbach2: link to the github org page</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:26:29goozbach3: link to the mailing list</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:26:30fugue88~ambush herlo</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:26:46goozbach4: history (cleaned logs of this channel from the discussion)</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:26:54goozbach5: assignments at the moment</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:27:03goozbach domains stuff</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:27:06goozbachherlo freeipa</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:27:08goozbachyou website</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:27:22goozbachtonight I'll write up another blogpost abt the packages thing</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:27:47fugue88~ambush herlo</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:28:08goozbach<a href="https://github.com/gooseproject">https://github.com/gooseproject</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:28:11fugue88~ambush herlo</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:28:11infobot comes out of hiding and launches an attack against herlo</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:28:34goozbach<a href="https://groups.google.com/group/goose-linux">https://groups.google.com/group/goose-linux</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:28:51goozbach<a href="http://blog.friocorte.com/2011/04/bootstrapping-a-rhel-clone.html">http://blog.friocorte.com/2011/04/bootstrapping-a-rhel-clone.html</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-25 15:29:17goozbachohh and 6: link to how to run a community -- <a href="https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community">https://www.theopensourceway.org/wiki/How_to_loosely_organize_a_community</a></td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:26:30@herlogoozbach: hi</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:26:50herlo thought he mentioned that he was busy today, but would be available the rest of the week to work on gooselinux :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:27:18goozbachdidn't ping you, just mentioned you</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:27:21goozbach:)</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:27:44goozbachI've not done anything but give shalkie some access</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:28:27shalkieYes. Some acess... bwwahahahahahahah...</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:28:36shalkies/acess/access/</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:28:36infobotshalkie meant: Yes. Some access... bwwahahahahahahah...</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:28:51shalkieThinking of which....</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:31:27@herlogoozbach: be careful what kind of access you give that guy :)</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:33:05goozbachbutttt</td></tr>
+<tr><td class="other" colspan="3">2011-04-25 16:33:14goozbach checks his page</td></tr>
+</table>
+
+<div class="generatedby">
+<p>Generated by irclog2html.py 2.7 by <a href="mailto:marius@pov.lt">Marius Gedminas</a>
+ - find it at <a href="http://mg.pov.lt/irclog2html/">mg.pov.lt</a>!</p>
+</div>
+</body>
+</html>
