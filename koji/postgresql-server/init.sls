@@ -5,27 +5,29 @@
     - group: postgres
     - mode: 600
     - require:
-      - postgres_database: koji
+      - cmd: /etc/init.d/postgresql initdb
 
 koji:
   postgres_database:
     - present
     - require:
-      - service: postgresql-server
+      - service: postgresql
 
-/etc/init.d/postgresql initdb:
-  cmd:
-    - name: pgsql-initdb
-    - run
-    - unless: ls -l /var/lib/pgsql/data/
-
-postgresql-server:
-  pkg:
-    - installed
+postgresql:
   service:
     - running
     - watch:
       - file: /var/lib/pgsql/data/pg_hba.conf
     - require:
-      - cmd: pgsql-initdb
+      - cmd: /etc/init.d/postgresql initdb
 
+/etc/init.d/postgresql initdb:
+  cmd:
+    - run
+    - unless: ls -l /var/lib/pgsql/data/pg_hba.conf
+    - require:
+      - pkg: postgresql-server
+
+postgresql-server:
+  pkg:
+    - installed
