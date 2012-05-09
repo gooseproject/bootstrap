@@ -5,14 +5,15 @@
     - group: postgres
     - mode: 600
     - require:
-      - service: postgresql-server
       - postgres_database: koji
 
 koji:
   postgres_database:
     - present
+    - require:
+      - service: postgresql-server
 
-service postgresql-server initdb:
+/etc/init.d/postgresql initdb:
   cmd:
     - name: pgsql-initdb
     - run
