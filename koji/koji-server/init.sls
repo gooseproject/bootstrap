@@ -1,27 +1,40 @@
 /etc/koji-hub/hub.conf:
   file.managed:
-    - source: salt://koji-hub/hub.conf
+    - source: salt://koji-hub/files/hub.conf
     - require:
      - pkg: koji-hub
 
 /etc/httpd/conf.d/kojihub.conf:
   file.managed:
-    - source: salt://koji-hub/kojihub.conf
+    - source: salt://koji-hub/files/kojihub.conf
     - require:
       - pkg: koji-hub
 
 /etc/httpd/conf.d/kojiweb.conf:
   file.managed:
-    - source: salt://koji-web/kojiweb.conf
+    - source: salt://koji-web/files/kojiweb.conf
     - user: root
     - group: root
     - mode: 644
     - require:
       - pkg: koji-web
 
+/var/lib/pgsql/data/pg_hba.conf:
+  file.managed:
+    - source: salt://koji-web/files/pg_hba.conf
+    - user: postgres
+    - group: postgres
+    - mode: 600
+    - require:
+      - pkg: postgresql-server
+
 postgresql-server:
   pkg:
     - installed
+  service:
+    - running
+    - watch:
+      - file: /var/lib/pgsql/data/pg_hba.conf
 
 mod_python:
   pkg:
@@ -40,18 +53,20 @@ httpd:
       - file: /etc/httpd/conf.d/kojiweb.conf
       - file: /etc/httpd/conf.d/kojihub.conf
 
-koji-hub:
-  pkg:
-    - installed
-
-koji-hub-plugins:
-  pkg:
-    - installed
-
 koji-web:
   pkg:
     - installed
     - require:
       - pkg: httpd
+
+koji-hub:
+  pkg:
+    - installed
+    - require:
+      - pkg: httpd
+
+koji-hub-plugins:
+  pkg:
+    - installed
 
 
