@@ -1,6 +1,6 @@
 /etc/httpd/conf.d/kojiweb.conf:
   file.managed:
-    - source: salt://koji-server/files/kojiweb.conf
+    - source: salt://koji-web/files/kojiweb.conf
     - user: root
     - group: root
     - mode: 644
