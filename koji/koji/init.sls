@@ -24,8 +24,8 @@ koji:
       - user: koji
       - file: /root/bin
 
-/root/bin/create_koji_db:
-  cmd:
-    - run
-    - onlyif: ls /root/bin/create_koji_db
-
+#/root/bin/create_koji_db:
+#  cmd:
+#    - run
+#    - onlyif: ls /root/bin/create_koji_db
+#
