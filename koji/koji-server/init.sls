@@ -45,14 +45,14 @@ koji:
     - require:
       - pkg: koji-hub
 
-/etc/httpd/conf.d/kojihub.conf:
-  file.managed:
-    - source: salt://koji-server/files/kojihub.conf
-    - user: root
-    - group: root
-    - mode: 644
-    - require:
-      - pkg: koji-hub
+#/etc/httpd/conf.d/kojihub.conf:
+#  file.managed:
+#    - source: salt://koji-server/files/kojihub.conf
+#    - user: root
+#    - group: root
+#    - mode: 644
+#    - require:
+#      - pkg: koji-hub
 
 /etc/httpd/conf.d/kojiweb.conf:
   file.managed:
@@ -60,6 +60,15 @@ koji:
     - user: root
     - group: root
     - mode: 644
+    - template: jinja
+    - context:
+        koji_url: "http://koji.egavas.org/koji/"
+        kojihub_url: "http://kojihub.egavas.org/kojihub"
+        kojipackages_url: "http://koji.egavas.org/mnt/koji/packages"
+        kojimaven_url: "http://koji.egavas.org/mnt/koji/maven2"
+        kojiimages_url: "http://koji.egavas.org/mnt/koji/images"
+    - defaults:
+        db_name: "koji"
     - require:
       - pkg: koji-web
 
