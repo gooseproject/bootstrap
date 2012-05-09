@@ -23,7 +23,6 @@ koji:
     - require:
       - user: koji
       - file: /root/bin
-      - file: /var/lib/pgsql/data/pg_hba.conf
 
 /root/bin/create_koji_db:
   cmd:
