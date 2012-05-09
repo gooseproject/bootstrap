@@ -5,8 +5,16 @@ if [ $EUID -ne 0 ]; then
     exit 1
 fi
 
+if [ -e /var/lib/pgsql/data/koji_db_exists ]; then
+    exit 0
+fi
+
 su - postgres -c 'createuser -S -D -R koji' &> /dev/null
 su - postgres -c 'createdb -O koji koji' &> /dev/null
 useradd koji &> /dev/null
 passwd -d koji &> /dev/null
 su - koji -c 'psql koji koji < /usr/share/doc/koji*/docs/schema.sql' &> /dev/null
+
+if [ $? -eq 0 ]; then
+    touch /var/lib/pgsql/data/koji_db_exists
+fi

@@ -16,7 +16,7 @@ koji:
 
 create_koji_db:
   file.managed:
-    - name: /root/bin/create_koji_db:
+    - name: /root/bin/create_koji_db
     - source: salt://koji/files/create_koji_db
     - user: root
     - group: root
