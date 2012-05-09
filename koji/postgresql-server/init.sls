@@ -1,4 +1,4 @@
-/var/lib/pgsql/data/pg_hba.conf
+/var/lib/pgsql/data/pg_hba.conf:
   file.managed:
     - source: salt://postgresql-server/files/pg_hba.conf
     - user: root
