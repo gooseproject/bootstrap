@@ -1,3 +1,17 @@
+/root/bin/create_koji_db:
+  file.managed:
+    - source: salt://koji-server/files/create_koji_db
+    - user: root
+    - group: root
+    - mode: 775
+    - require:
+      - file: /var/lib/pgsql/data/pg_hba.conf
+
+/root/bin/create_koji_db:
+  cmd.run
+    - require:
+      - file: /root/bin/create_koji_db
+
 /etc/koji-hub/hub.conf:
   file.managed:
     - source: salt://koji-server/files/hub.conf

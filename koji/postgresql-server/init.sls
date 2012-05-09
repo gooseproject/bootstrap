@@ -7,12 +7,6 @@
     - require:
       - cmd: /etc/init.d/postgresql initdb
 
-koji:
-  postgres_database:
-    - present
-    - require:
-      - service: postgresql
-
 postgresql:
   service:
     - running
