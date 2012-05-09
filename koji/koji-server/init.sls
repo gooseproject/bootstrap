@@ -1,6 +1,7 @@
 koji:
   user:
     - present
+    - home: /home/koji
     - fullname: Koji User
 
 /root/bin:
@@ -21,7 +22,7 @@ koji:
       - file: /var/lib/pgsql/data/pg_hba.conf
 
 /root/bin/create_koji_db:
-  cmd
+  cmd:
     - run
     - onlyif: ls /root/bin/create_koji_db &> /dev/null
 

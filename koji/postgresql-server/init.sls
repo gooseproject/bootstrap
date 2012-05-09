@@ -12,8 +12,6 @@ postgresql:
     - running
     - watch:
       - file: /var/lib/pgsql/data/pg_hba.conf
-    - require:
-      - cmd: /etc/init.d/postgresql initdb
 
 /etc/init.d/postgresql initdb:
   cmd:
