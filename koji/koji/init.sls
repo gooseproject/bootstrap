@@ -1,6 +1,6 @@
 include:
-  - koji-hub
-  - koji-web
+  - koji.hub
+  - koji.web
 
 koji:
   user:
@@ -16,7 +16,7 @@ koji:
 
 /root/bin/create_koji_db:
   file.managed:
-    - source: salt://koji-server/files/create_koji_db
+    - source: salt://koji/files/create_koji_db
     - user: root
     - group: root
     - mode: 775
@@ -27,5 +27,5 @@ koji:
 /root/bin/create_koji_db:
   cmd:
     - run
-    - onlyif: ls /root/bin/create_koji_db &> /dev/null
+    - onlyif: ls /root/bin/create_koji_db
 
