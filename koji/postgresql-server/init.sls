@@ -1,11 +1,16 @@
 /var/lib/pgsql/data/pg_hba.conf:
   file.managed:
     - source: salt://postgresql-server/files/pg_hba.conf
-    - user: root
-    - group: root
-    - mode: 644
+    - user: postgres
+    - group: postgres
+    - mode: 600
     - require:
-      - pkg: postgresql-server
+      - service: postgresql-server
+      - postgres_database: koji
+
+koji:
+  postgres_database:
+    - present
 
 service postgresql-server initdb:
   cmd:

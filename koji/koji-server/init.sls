@@ -35,19 +35,6 @@
     - require:
       - pkg: koji-web
 
-/var/lib/pgsql/data/pg_hba.conf:
-  file.managed:
-    - source: salt://postgresql-server/files/pg_hba.conf
-    - user: postgres
-    - group: postgres
-    - mode: 600
-    - require:
-      - postgres_database: koji
-
-koji:
-  postgres_database:
-    - present
-
 mod_python:
   pkg:
     - installed
