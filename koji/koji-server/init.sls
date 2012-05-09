@@ -37,38 +37,21 @@
 
 /var/lib/pgsql/data/pg_hba.conf:
   file.managed:
-    - source: salt://koji-server/files/pg_hba.conf
+    - source: salt://postgresql-server/files/pg_hba.conf
     - user: postgres
     - group: postgres
     - mode: 600
     - require:
-      - pkg: postgresql-server
+      - postgres_database: koji
 
-postgresql-server:
-  pkg:
-    - installed
-  service:
-    - running
-    - watch:
-      - file: /var/lib/pgsql/data/pg_hba.conf
+koji:
+  postgres_database:
+    - present
 
 mod_python:
   pkg:
     - installed
  
-mod_ssl:
-  pkg:
-    - installed
-
-httpd:
-  pkg:
-    - installed
-  service:
-    - running
-    - watch:
-      - file: /etc/httpd/conf.d/kojiweb.conf
-      - file: /etc/httpd/conf.d/kojihub.conf
-
 koji-web:
   pkg:
     - installed

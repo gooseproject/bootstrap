@@ -1,0 +1,4 @@
+base:
+  '*':
+    - postgresql
+    - koji-server
