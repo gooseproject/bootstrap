@@ -1,4 +1,4 @@
 base:
   '*':
-    - postgresql
+    - postgresql-server
     - koji-server
