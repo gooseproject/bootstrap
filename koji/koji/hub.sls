@@ -1,6 +1,6 @@
 /etc/koji-hub/hub.conf:
   file.managed:
-    - source: salt://koji-hub/files/hub.conf
+    - source: salt://koji/files/hub.conf
     - user: root
     - group: root
     - mode: 644
@@ -17,7 +17,7 @@
 
 /etc/httpd/conf.d/kojihub.conf:
   file.managed:
-    - source: salt://koji-hub/files/kojihub.conf
+    - source: salt://koji/files/kojihub.conf
     - user: root
     - group: root
     - mode: 644
