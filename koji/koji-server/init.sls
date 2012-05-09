@@ -21,9 +21,9 @@ koji:
       - file: /var/lib/pgsql/data/pg_hba.conf
 
 /root/bin/create_koji_db:
-  cmd.run
-    - require:
-      - file: /root/bin/create_koji_db
+  cmd
+    - run
+    - onlyif: ls /root/bin/create_koji_db &> /dev/null
 
 /etc/koji-hub/hub.conf:
   file.managed:
