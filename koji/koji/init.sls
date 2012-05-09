@@ -14,8 +14,9 @@ koji:
     - group: root
     - mode: 775
 
-/root/bin/create_koji_db:
+create_koji_db:
   file.managed:
+    - name: /root/bin/create_koji_db:
     - source: salt://koji/files/create_koji_db
     - user: root
     - group: root
@@ -24,8 +25,8 @@ koji:
       - user: koji
       - file: /root/bin
 
-#/root/bin/create_koji_db:
-#  cmd:
-#    - run
-#    - onlyif: ls /root/bin/create_koji_db
-#
+/root/bin/create_koji_db:
+  cmd:
+    - run
+    - onlyif: ls /root/bin/create_koji_db
+
