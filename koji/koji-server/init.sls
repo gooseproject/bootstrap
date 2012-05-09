@@ -1,18 +1,18 @@
 /etc/koji-hub/hub.conf:
   file.managed:
-    - source: salt://koji-hub/files/hub.conf
+    - source: salt://koji-server/files/hub.conf
     - require:
-     - pkg: koji-hub
+      - pkg: koji-hub
 
 /etc/httpd/conf.d/kojihub.conf:
   file.managed:
-    - source: salt://koji-hub/files/kojihub.conf
+    - source: salt://koji-server/files/kojihub.conf
     - require:
       - pkg: koji-hub
 
 /etc/httpd/conf.d/kojiweb.conf:
   file.managed:
-    - source: salt://koji-web/files/kojiweb.conf
+    - source: salt://koji-server/files/kojiweb.conf
     - user: root
     - group: root
     - mode: 644
@@ -21,7 +21,7 @@
 
 /var/lib/pgsql/data/pg_hba.conf:
   file.managed:
-    - source: salt://koji-web/files/pg_hba.conf
+    - source: salt://koji-server/files/pg_hba.conf
     - user: postgres
     - group: postgres
     - mode: 600
