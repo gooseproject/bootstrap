@@ -1,3 +1,9 @@
+/etc/httpd/conf/httpd.conf
+  file.sed:
+    - before: 4000
+    - after: 100
+    - limit: ^MaxRequestsPerChild
+
 mod_ssl:
   pkg:
     - installed
