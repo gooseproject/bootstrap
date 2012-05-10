@@ -31,6 +31,7 @@ create_koji_db:
     - run
     - order: last
     - onlyif: ls /root/bin/create_koji_db
+    - unless: ls /var/lib/pgsql/data/koji_db_exists
     - require:
       - file: create_koji_db
       - cmd: initdb
