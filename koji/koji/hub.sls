@@ -9,7 +9,7 @@
         db_name: "koji"
         db_user: "koji"
         db_host: "localhost"
-        kojiweb_url: "http://localhost/koji"
+        kojiweb_url: "http://kojiweb.egavas.org/koji"
         email_domain: "localhost.localdomain"
         proxy_dns: "/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=koji.egavas.org/emailAddress=admin@egavas.org"
     - require:
