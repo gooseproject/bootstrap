@@ -5,7 +5,7 @@
     - group: postgres
     - mode: 600
     - require:
-      - cmd: /etc/init.d/postgresql initdb
+      - cmd: initdb
 
 postgresql:
   service:
@@ -13,9 +13,10 @@ postgresql:
     - watch:
       - file: /var/lib/pgsql/data/pg_hba.conf
 
-/etc/init.d/postgresql initdb:
+initdb:
   cmd:
     - run
+    - name: /etc/init.d/postgresql initdb:
     - unless: ls -l /var/lib/pgsql/data/pg_hba.conf
     - require:
       - pkg: postgresql-server

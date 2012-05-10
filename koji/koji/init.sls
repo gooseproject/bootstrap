@@ -31,3 +31,4 @@ create_koji_db:
     - onlyif: ls /root/bin/create_koji_db
     - require:
       - file: create_koji_db
+      - cmd: initdb
