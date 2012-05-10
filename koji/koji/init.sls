@@ -9,6 +9,12 @@ koji:
     - home: /home/koji
     - fullname: Koji User
 
+kojiadmin:
+  user:
+    - present
+    - home: /home/kojiadmin
+    - fullname: Koji Admin
+
 /root/bin:
   file.directory:
     - user: root
