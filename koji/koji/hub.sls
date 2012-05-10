@@ -11,7 +11,7 @@
         db_host: "localhost"
         kojiweb_url: "http://localhost/koji"
         email_domain: "localhost.localdomain"
-        proxy_dns: "/C=US/ST=Utah/O=Local Host/OU=kojiweb/CN=localhost/emailAddress=admin@localhost.localdomain"
+        proxy_dns: "/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=koji.egavas.org/emailAddress=admin@egavas.org"
     - require:
       - pkg: koji-hub
 
