@@ -1,6 +1,7 @@
 include:
   - koji.hub
   - koji.web
+  - koji.ssl
 
 koji:
   user:
