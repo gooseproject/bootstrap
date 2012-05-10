@@ -9,12 +9,16 @@
     - user: root
     - group: root
     - mode: 755
+    - require:
+      file: /etc/pki/koji
 
 /etc/pki/koji/private:
   file.directory:
     - user: root
     - group: root
     - mode: 755
+    - require:
+      file: /etc/pki/koji
 
 /etc/pki/koji/ssl.cnf:
   file.managed:
@@ -28,14 +32,20 @@
     - user: root
     - group: root
     - mode: 644
+    - require:
+      file: /etc/pki/koji
 
 /etc/pki/koji/index.txt:
   file.touch:
     - user: root
     - group: root
     - mode: 644
+    - require:
+      file: /etc/pki/koji
 
 echo 01 > /etc/pki/koji/serial:
   cmd:
     - run
     - unless: ls /etc/pki/koji/serial
+    - require:
+      file: /etc/pki/koji
