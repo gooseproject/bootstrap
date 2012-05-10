@@ -28,6 +28,7 @@ create_koji_db:
 /root/bin/create_koji_db:
   cmd:
     - run
+    - order: last
     - onlyif: ls /root/bin/create_koji_db
     - require:
       - file: create_koji_db

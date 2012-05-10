@@ -16,7 +16,7 @@ postgresql:
 initdb:
   cmd:
     - run
-    - name: /etc/init.d/postgresql initdb:
+    - name: /etc/init.d/postgresql initdb
     - unless: ls -l /var/lib/pgsql/data/pg_hba.conf
     - require:
       - pkg: postgresql-server
