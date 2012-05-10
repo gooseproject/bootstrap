@@ -29,4 +29,5 @@ create_koji_db:
   cmd:
     - run
     - onlyif: ls /root/bin/create_koji_db
-
+    - require:
+      - file: create_koji_db
