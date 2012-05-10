@@ -1,8 +1,7 @@
-/etc/httpd/conf/httpd.conf
+/etc/httpd/conf/httpd.conf:
   file.sed:
-    - before: 4000
-    - after: 100
-    - limit: ^MaxRequestsPerChild
+    - before: 'MaxRequestsPerChild  4000'
+    - after: 'MaxRequestsPerChild  100'
 
 mod_ssl:
   pkg:
@@ -14,5 +13,6 @@ httpd:
   service:
     - running
     - watch:
+      - file: /etc/httpd/conf/httpd.conf:
       - file: /etc/httpd/conf.d/kojiweb.conf
       - file: /etc/httpd/conf.d/kojihub.conf
