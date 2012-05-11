@@ -34,4 +34,3 @@ koji-hub-plugins:
   pkg:
     - installed
 
-
