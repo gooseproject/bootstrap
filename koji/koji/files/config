@@ -1,13 +1,13 @@
 [koji]
 
 ;url of XMLRPC server
-server = http://{{ kojihub_url }}/kojihub
+server = {{ kojihub_url }}
 
 ;url of web interface
-weburl = http://{{ kojiweb_url }}/koji
+weburl = {{ kojiweb_url }}
 
 ;url of package download site
-pkgurl = http://{{ kojiweb_url }}/packages
+pkgurl = {{ kojipkg_url }}
 
 ;path to the koji top directory
 topdir = /mnt/koji

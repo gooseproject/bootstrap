@@ -3,6 +3,7 @@
     - user: root
     - group: root
     - mode: 755
+    - order: 200
 
 /etc/pki/koji/certs:
   file.directory:
@@ -32,6 +33,7 @@
     - user: root
     - group: root
     - mode: 644
+    - order: 200
     - require:
       - file: /etc/pki/koji
 
@@ -67,8 +69,19 @@ create_koji_pki:
     - unless: ls /etc/pki/koji/koji_ca_cert.crt
     - require:
       - file: create_koji_pki
+      - file: /etc/pki/koji/ssl.cnf
 
-/etc/httpd/conf/ssl.conf:
+create_ssl_certs:
+  file.managed:
+    - name: /root/bin/create_ssl_certs
+    - source: salt://koji/files/create_ssl_certs
+    - user: root
+    - group: root
+    - mode: 775
+    - require:
+      - file: create_koji_pki
+
+/etc/httpd/conf.d/ssl.conf:
   file.managed:
     - source: salt://koji/files/ssl.conf
     - user: root

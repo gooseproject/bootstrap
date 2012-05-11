@@ -6,16 +6,12 @@ include:
 koji:
   user:
     - present
-    - uid: 5000
-    - gid: 5000
     - home: /home/koji
     - fullname: Koji User
 
 kojiadmin:
   user:
     - present
-    - uid: 5001
-    - gid: 5001
     - home: /home/kojiadmin
     - fullname: Koji Admin
 
@@ -26,6 +22,11 @@ kojiadmin:
     - group: kojiadmin
     - mode: 644
     - makedirs: true
+    - template: jinja
+    - context:
+        kojiweb_url: "http://koji2.egavas.org/koji/"
+        kojihub_url: "http://kojihub2.egavas.org/kojihub"
+        kojipkg_url: "http://kojihub2.egavas.org/mnt/koji/packages"
     - require:
       - user: kojiadmin
 #      - file: /home/kojiadmin/.koji/client.crt

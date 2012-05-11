@@ -9,9 +9,9 @@
         db_name: "koji"
         db_user: "koji"
         db_host: "localhost"
-        kojiweb_url: "http://kojiweb.egavas.org/koji"
+        kojiweb_url: "http://kojiweb2.egavas.org/koji"
         email_domain: "localhost.localdomain"
-        proxy_dns: "/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=koji.egavas.org/emailAddress=admin@egavas.org"
+        proxy_dns: "/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=koji2.egavas.org/emailAddress=admin@egavas.org"
     - require:
       - pkg: koji-hub
 

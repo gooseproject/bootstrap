@@ -6,11 +6,11 @@
     - mode: 644
     - template: jinja
     - context:
-        koji_url: "http://koji.egavas.org/koji/"
-        kojihub_url: "http://kojihub.egavas.org/kojihub"
-        kojipackages_url: "http://koji.egavas.org/mnt/koji/packages"
-        kojimaven_url: "http://koji.egavas.org/mnt/koji/maven2"
-        kojiimages_url: "http://koji.egavas.org/mnt/koji/images"
+        koji_url: "http://koji2.egavas.org/koji/"
+        kojihub_url: "http://kojihub2.egavas.org/kojihub"
+        kojipackages_url: "http://koji2.egavas.org/mnt/koji/packages"
+        kojimaven_url: "http://koji2.egavas.org/mnt/koji/maven2"
+        kojiimages_url: "http://koji2.egavas.org/mnt/koji/images"
     - defaults:
         db_name: "koji"
     - require:
