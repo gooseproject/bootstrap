@@ -49,3 +49,13 @@ echo 01 > /etc/pki/koji/serial:
     - unless: ls /etc/pki/koji/serial
     - require:
       - file: /etc/pki/koji
+
+/etc/httpd/conf/httpd.conf:
+  file.managed:
+    - source: salt://koji/files/ssl.conf
+    - user: root
+    - group: root
+    - mode: 644
+    - require:
+      - pkg: mod_ssl
+
