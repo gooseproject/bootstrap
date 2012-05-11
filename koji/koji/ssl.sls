@@ -53,7 +53,7 @@ echo 01 > /etc/pki/koji/serial:
 create_koji_pki:
   file.managed:
     - name: /root/bin/create_koji_pki
-    - source: salt://koji/files/create_koji_db
+    - source: salt://koji/files/create_koji_pki
     - user: root
     - group: root
     - mode: 775

@@ -24,5 +24,5 @@ httpd:
 setsebool -P httpd_can_network_connect_db 1:
   cmd:
     - run
-    - unless: [ "$(getsebool httpd_can_network_connect_db)" == "httpd_can_network_connect_db --> on" ]
+    - unless: '[ "$(getsebool httpd_can_network_connect_db)" == "httpd_can_network_connect_db --> on" ]'
 

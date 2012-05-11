@@ -27,9 +27,10 @@ kojiadmin:
     - mode: 644
     - makedirs: true
     - require:
-      - file: /home/kojiadmin/.koji/client.crt
-      - file: /home/kojiadmin/.koji/clientca.crt
-      - file: /home/kojiadmin/.koji/serverca.crt
+      - user: kojiadmin
+#      - file: /home/kojiadmin/.koji/client.crt
+#      - file: /home/kojiadmin/.koji/clientca.crt
+#      - file: /home/kojiadmin/.koji/serverca.crt
 
 /root/bin:
   file.directory:
