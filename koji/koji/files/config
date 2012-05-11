@@ -1,0 +1,25 @@
+[koji]
+
+;url of XMLRPC server
+server = http://{{ kojihub_url }}/kojihub
+
+;url of web interface
+weburl = http://{{ kojiweb_url }}/koji
+
+;url of package download site
+pkgurl = http://{{ kojiweb_url }}/packages
+
+;path to the koji top directory
+topdir = /mnt/koji
+
+;configuration for SSL athentication
+;client certificate
+cert = ~/.koji/client.crt
+
+;certificate of the CA that issued the client certificate
+ca = ~/.koji/clientca.crt
+
+;certificate of the CA that issued the HTTP server certificate
+serverca = ~/.koji/serverca.crt
+
+
