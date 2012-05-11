@@ -1,0 +1,13 @@
+#!/bin/bash
+
+CANAME=koji
+
+pushd /etc/pki/koji &> /dev/null
+for USER in kojira kojiweb kojihub kojiadmin; do
+    DN="/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=${USER}/emailAddress=admin@egavas.org"
+    openssl genrsa -out certs/${USER}.key 2048
+    openssl req -config ssl.cnf -new -nodes -out certs/${USER}.csr -subj "${DN}" -key certs/${USER}.key
+    openssl ca -config ssl.cnf -keyfile private/${CANAME}_ca_cert.key -cert ${CANAME}_ca_cert.crt -out certs/${USER}.crt -outdir certs -infiles certs/${USER}.csr  
+    cat certs/${USER}.crt certs/${USER}.key > ${USER}.pem
+done
+popd &> /dev/null

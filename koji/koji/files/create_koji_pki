@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/bash -x
 
 CANAME=koji
-DN=/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=me3/emailAddress=admin@egavas.org
+DN='/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=koji2.egavas.org/emailAddress=admin@egavas.org'
 
-openssl genrsa -out private/${CANAME}_ca_cert.key 2048
-openssl req -config ssl.cnf -new -x509 -days 3650 -key private/${CANAME}_ca_cert.key -subj "${DN}" -out ${CANAME}_ca_cert.crt -extensions v3_ca
+openssl genrsa -out /etc/pki/koji/private/${CANAME}_ca_cert.key 2048
+openssl req -config /etc/pki/koji/ssl.cnf -new -x509 -days 3650 -key /etc/pki/koji/private/${CANAME}_ca_cert.key -out /etc/pki/koji/${CANAME}_ca_cert.crt -subj "${DN}" -extensions v3_ca
