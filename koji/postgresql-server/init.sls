@@ -10,7 +10,6 @@
 postgresql:
   service:
     - running
-    - enabled
     - watch:
       - file: /var/lib/pgsql/data/pg_hba.conf
 
