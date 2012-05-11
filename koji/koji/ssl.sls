@@ -50,7 +50,25 @@ echo 01 > /etc/pki/koji/serial:
     - require:
       - file: /etc/pki/koji
 
-/etc/httpd/conf/httpd.conf:
+create_koji_pki:
+  file.managed:
+    - name: /root/bin/create_koji_pki
+    - source: salt://koji/files/create_koji_db
+    - user: root
+    - group: root
+    - mode: 775
+    - require:
+      - file: /etc/pki/koji/index.txt
+      - cmd: echo 01 > /etc/pki/koji/serial
+
+/root/bin/create_koji_pki:
+  cmd:
+    - run
+    - unless: ls /etc/pki/koji/koji_ca_cert.crt
+    - require:
+      - file: create_koji_pki
+
+/etc/httpd/conf/ssl.conf:
   file.managed:
     - source: salt://koji/files/ssl.conf
     - user: root

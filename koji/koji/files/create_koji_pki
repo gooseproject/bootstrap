@@ -2,8 +2,6 @@
 
 CANAME=koji
 DN=/C=US/ST=Utah/L=Murray/O=GoOSe Project/CN=me3/emailAddress=admin@egavas.org
-USER=me
 
-openssl genrsa -out certs/${USER}.key 2048 &> /dev/null
-openssl req -config ssl.cnf -new -nodes -out certs/${USER}.csr -subj "${DN}" -key certs/${USER}.key &> /dev/null
-openssl ca -config ssl.cnf -keyfile private/${CANAME}_ca_cert.key -cert ${CANAME}_ca_cert.crt -out certs/${USER}.crt -outdir certs -batch -infiles certs/${USER}.csr&> /dev/null
+openssl genrsa -out private/${CANAME}_ca_cert.key 2048
+openssl req -config ssl.cnf -new -x509 -days 3650 -key private/${CANAME}_ca_cert.key -subj "${DN}" -out ${CANAME}_ca_cert.crt -extensions v3_ca

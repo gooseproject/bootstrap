@@ -19,19 +19,6 @@ kojiadmin:
     - home: /home/kojiadmin
     - fullname: Koji Admin
 
-create_koji_pki:
-  file.managed:
-    - name: /root/bin/create_koji_pki
-    - source: salt://koji/files/create_koji_db
-    - user: root
-    - group: root
-    - mode: 775
-    - require:
-      - user: koji
-      - file: /root/bin
-
-/root/bin/create_koji_pki:
-
 /home/kojiadmin/.koji/config:
   file.managed:
     - source: salt://koji/files/config

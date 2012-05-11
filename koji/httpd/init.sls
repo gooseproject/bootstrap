@@ -17,6 +17,7 @@ httpd:
     - enabled
     - watch:
       - file: /etc/httpd/conf/httpd.conf
+      - file: /etc/httpd/conf/ssl.conf
       - file: /etc/httpd/conf.d/kojiweb.conf
       - file: /etc/httpd/conf.d/kojihub.conf
 
