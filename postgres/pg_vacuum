@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Vacuum the koji db once a week
+#
+# Ivan Makfinsky <ivan@makfinsky.com> Nov 3 2011
+
+vacuumdb -f -q -z -U postgres -d koji >> /var/log/messages 2>&1
+
